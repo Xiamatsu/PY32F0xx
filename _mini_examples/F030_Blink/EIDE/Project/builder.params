@@ -1,0 +1,101 @@
+{
+    "name": "Blink",
+    "target": "Project",
+    "toolchain": "GCC",
+    "toolchainLocation": "C:\\Users\\User\\.eide\\tools\\gcc_arm",
+    "toolchainCfgFile": "c:\\Users\\User\\.vscode\\extensions\\cl.eide-3.26.1\\res\\data\\models/arm.gcc.model.json",
+    "buildMode": "fast|multhread",
+    "showRepathOnLog": true,
+    "threadNum": 16,
+    "rootDir": "c:\\MCU\\py32mini\\miniProjects\\F030_Blink\\EIDE",
+    "dumpPath": "Project",
+    "outDir": "Project",
+    "incDirs": [
+        "../Inc",
+        "../../../Drivers/CMSIS/Include",
+        "../../../Drivers/CMSIS/Device/PY32F0xx/Include"
+    ],
+    "libDirs": [
+        "../../../Drivers/CMSIS/Device/PY32F0xx/Source"
+    ],
+    "defines": [
+        "PY32F030x6"
+    ],
+    "sourceList": [
+        "../Src/main.c",
+        "../Src/py32f0xx_it.c",
+        "../System/startup_py32f030xx.s",
+        "../System/system_py32f0xx.c"
+    ],
+    "alwaysInBuildSources": [],
+    "sourceParams": {},
+    "options": {
+        "version": 5,
+        "afterBuildTasks": [
+            {
+                "name": "make disasm",
+                "abortAfterFailed": false,
+                "command": "arm-none-eabi-objdump -S ${OutDir}\\${ProjectName}.elf > ${OutDir}\\${ProjectName}.lst",
+                "disable": false
+            }
+        ],
+        "asm-compiler": {},
+        "beforeBuildTasks": [],
+        "c/cpp-compiler": {
+            "language-c": "c23",
+            "language-cpp": "c++23",
+            "one-elf-section-per-data": true,
+            "one-elf-section-per-function": true,
+            "optimization": "level-0",
+            "warnings": "all-warnings"
+        },
+        "global": {
+            "$float-abi-type": "softfp",
+            "arm-thumb-mode": "thumb",
+            "output-debug-info": "enable",
+            "use-newlib-nano": true,
+            "toolPrefix": "arm-none-eabi-",
+            "microcontroller-cpu": "cortex-m0+",
+            "microcontroller-fpu": "cortex-m0+",
+            "microcontroller-float": "cortex-m0+",
+            "$arch-extensions": "",
+            "$clang-arch-extensions": "",
+            "$armlink-arch-extensions": ""
+        },
+        "linker": {
+            "$toolName": "gcc",
+            "LD_FLAGS": "-Wl,--no-warn-rwx-segments",
+            "LIB_FLAGS": "-lm",
+            "output-format": "elf",
+            "remove-unused-input-sections": true,
+            "link-scatter": [
+                "c:/MCU/py32mini/miniProjects/F030_Blink/System/py32f030x6.ld"
+            ]
+        }
+    },
+    "env": {
+        "workspaceFolder": "c:\\MCU\\py32mini\\miniProjects\\F030_Blink\\EIDE",
+        "workspaceFolderBasename": "EIDE",
+        "OutDir": "c:\\MCU\\py32mini\\miniProjects\\F030_Blink\\EIDE\\.\\Project",
+        "OutDirRoot": ".",
+        "OutDirBase": ".\\Project",
+        "ProjectName": "Blink",
+        "ConfigName": "Project",
+        "ProjectRoot": "c:\\MCU\\py32mini\\miniProjects\\F030_Blink\\EIDE",
+        "ExecutableName": "c:\\MCU\\py32mini\\miniProjects\\F030_Blink\\EIDE\\.\\Project\\Blink",
+        "ChipPackDir": "",
+        "ChipName": "",
+        "SYS_Platform": "win32",
+        "SYS_DirSep": "\\",
+        "SYS_DirSeparator": "\\",
+        "SYS_PathSep": ";",
+        "SYS_PathSeparator": ";",
+        "SYS_EOL": "\r\n",
+        "EIDE_BUILDER_DIR": "c:\\Users\\User\\.vscode\\extensions\\cl.eide-3.26.1\\res\\tools\\win32\\unify_builder",
+        "EIDE_BINARIES_VER": "12.1.1",
+        "EIDE_MSYS": "C:\\Users\\User\\.eide\\bin\\builder\\msys\\bin",
+        "EIDE_PY3_CMD": "C:\\Users\\User\\.eide\\bin\\python36\\python3.exe",
+        "ToolchainRoot": "C:\\Users\\User\\.eide\\tools\\gcc_arm"
+    },
+    "sysPaths": []
+}

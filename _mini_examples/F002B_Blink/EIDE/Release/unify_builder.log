@@ -1,0 +1,21 @@
+[2025-11-12 16:44:59]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'c:\MCU\py32mini\miniProjects\F002B_Blink\Src\main.c': object (.o) file not exist
+'c:\MCU\py32mini\miniProjects\F002B_Blink\Src\py32f002b_it.c': object (.o) file not exist
+'c:\MCU\py32mini\miniProjects\F002B_Blink\System\startup_py32f002bxx.s': object (.o) file not exist
+'c:\MCU\py32mini\miniProjects\F002B_Blink\System\system_py32f002b.c': object (.o) file not exist
+
+[2025-11-12 16:44:59]	[done]
+	build successfully !
+
+[2025-11-12 16:45:49]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'c:\MCU\py32mini\miniProjects\F002B_Blink\Src\main.c': compiler options has been changed.
+'c:\MCU\py32mini\miniProjects\F002B_Blink\Src\py32f002b_it.c': compiler options has been changed.
+'c:\MCU\py32mini\miniProjects\F002B_Blink\System\system_py32f002b.c': compiler options has been changed.
+
+[2025-11-12 16:45:50]	[done]
+	build successfully !
+

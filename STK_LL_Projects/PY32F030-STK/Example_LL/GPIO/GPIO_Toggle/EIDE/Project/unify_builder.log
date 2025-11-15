@@ -1,0 +1,22 @@
+[2025-10-06 13:40:36]	compilation failed at : "c:\PY32\Projects\PY32F030-STK\Example_LL\GPIO\GPIO_Toggle\EIDE\startup_py32f030xx.s", exit code: 1
+command: 
+  "C:\Users\User\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe" -c -x assembler-with-cpp -I. -I../Inc -I../../../../../../Drivers/BSP/PY32F030xx_Start_Kit -I../../../../../../Drivers/CMSIS/Include -I../../../../../../Drivers/CMSIS/Device/PY32F0xx/Include -I../../../../../../Drivers/PY32F0xx_HAL_Driver/Inc -mcpu=cortex-m0plus -mthumb -g --specs=nosys.specs --specs=nano.specs -o ./Project/.obj/startup_py32f030xx.o -MMD ./startup_py32f030xx.s
+   at unify_builder.Program.Main(String[] args_)
+---
+./startup_py32f030xx.s: Assembler messages:
+./startup_py32f030xx.s:1: Error: junk at end of line, first unrecognized character is `-'
+./startup_py32f030xx.s:2: Error: bad size 0 in type specifier
+./startup_py32f030xx.s:2: Error: bad instruction `startup_py32f030xx.s'
+
+[2025-10-06 13:41:31]	[done]
+	build successfully !
+
+[2025-10-06 13:43:35]	[done]
+	build successfully !
+
+[2025-10-06 13:44:23]	[done]
+	build successfully !
+
+[2025-10-06 14:01:09]	[done]
+	build successfully !
+

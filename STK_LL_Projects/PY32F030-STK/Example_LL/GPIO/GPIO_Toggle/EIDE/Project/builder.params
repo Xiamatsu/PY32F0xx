@@ -1,0 +1,102 @@
+{
+    "name": "Project",
+    "target": "Project",
+    "toolchain": "GCC",
+    "toolchainLocation": "C:\\Users\\User\\.eide\\tools\\gcc_arm",
+    "toolchainCfgFile": "c:\\Users\\User\\.vscode\\extensions\\cl.eide-3.26.1\\res\\data\\models/arm.gcc.model.json",
+    "buildMode": "fast|multhread",
+    "showRepathOnLog": true,
+    "threadNum": 16,
+    "rootDir": "c:\\PY32\\Projects\\PY32F030-STK\\Example_LL\\GPIO\\GPIO_Toggle\\EIDE",
+    "dumpPath": "Project",
+    "outDir": "Project",
+    "incDirs": [
+        ".",
+        "../Inc",
+        "../../../../../../Drivers/BSP/PY32F030xx_Start_Kit",
+        "../../../../../../Drivers/CMSIS/Include",
+        "../../../../../../Drivers/CMSIS/Device/PY32F0xx/Include",
+        "../../../../../../Drivers/PY32F0xx_HAL_Driver/Inc"
+    ],
+    "libDirs": [],
+    "defines": [
+        "PY32F030x8",
+        "USE_FULL_LL_DRIVER"
+    ],
+    "sourceList": [
+        "../../../../../../Drivers/BSP/PY32F030xx_Start_Kit/py32f030xx_ll_Start_Kit.c",
+        "../../../../../../Drivers/PY32F0xx_HAL_Driver/Src/py32f0xx_ll_utils.c",
+        "../Src/main.c",
+        "../Src/py32f0xx_it.c",
+        "../Src/system_py32f0xx.c",
+        "startup_py32f030xx.s"
+    ],
+    "alwaysInBuildSources": [],
+    "sourceParams": {},
+    "options": {
+        "version": 5,
+        "afterBuildTasks": [],
+        "asm-compiler": {
+            "ASM_FLAGS": ""
+        },
+        "beforeBuildTasks": [],
+        "c/cpp-compiler": {
+            "CXX_FLAGS": "",
+            "C_FLAGS": "",
+            "language-c": "c11",
+            "language-cpp": "c++11",
+            "one-elf-section-per-data": true,
+            "one-elf-section-per-function": true,
+            "optimization": "level-debug",
+            "warnings": "all-warnings"
+        },
+        "global": {
+            "$float-abi-type": "softfp",
+            "misc-control": "--specs=nosys.specs --specs=nano.specs",
+            "output-debug-info": "enable",
+            "toolPrefix": "arm-none-eabi-",
+            "arm-thumb-mode": "thumb",
+            "microcontroller-cpu": "cortex-m0+",
+            "microcontroller-fpu": "cortex-m0+",
+            "microcontroller-float": "cortex-m0+",
+            "$arch-extensions": "",
+            "$clang-arch-extensions": "",
+            "$armlink-arch-extensions": ""
+        },
+        "linker": {
+            "LD_FLAGS": " ",
+            "LIB_FLAGS": "-lm",
+            "output-format": "elf",
+            "remove-unused-input-sections": true,
+            "$toolName": "gcc",
+            "link-scatter": [
+                "c:/PY32/Projects/PY32F030-STK/Example_LL/GPIO/GPIO_Toggle/EIDE/py32f030x8.ld"
+            ]
+        }
+    },
+    "env": {
+        "workspaceFolder": "c:\\PY32\\Projects\\PY32F030-STK\\Example_LL\\GPIO\\GPIO_Toggle\\EIDE",
+        "workspaceFolderBasename": "EIDE",
+        "OutDir": "c:\\PY32\\Projects\\PY32F030-STK\\Example_LL\\GPIO\\GPIO_Toggle\\EIDE\\.\\Project",
+        "OutDirRoot": ".",
+        "OutDirBase": ".\\Project",
+        "ProjectName": "Project",
+        "ConfigName": "Project",
+        "ProjectRoot": "c:\\PY32\\Projects\\PY32F030-STK\\Example_LL\\GPIO\\GPIO_Toggle\\EIDE",
+        "ExecutableName": "c:\\PY32\\Projects\\PY32F030-STK\\Example_LL\\GPIO\\GPIO_Toggle\\EIDE\\.\\Project\\Project",
+        "ChipPackDir": "",
+        "ChipName": "PY32F030x8",
+        "SYS_Platform": "win32",
+        "SYS_DirSep": "\\",
+        "SYS_DirSeparator": "\\",
+        "SYS_PathSep": ";",
+        "SYS_PathSeparator": ";",
+        "SYS_EOL": "\r\n",
+        "EIDE_BUILDER_DIR": "c:\\Users\\User\\.vscode\\extensions\\cl.eide-3.26.1\\res\\tools\\win32\\unify_builder",
+        "EIDE_BINARIES_VER": "12.1.1",
+        "EIDE_MSYS": "C:\\Users\\User\\.eide\\bin\\builder\\msys\\bin",
+        "EIDE_PY3_CMD": "C:\\Users\\User\\.eide\\bin\\python36\\python3.exe",
+        "ToolchainRoot": "C:\\Users\\User\\.eide\\tools\\gcc_arm"
+    },
+    "sysPaths": []
+}

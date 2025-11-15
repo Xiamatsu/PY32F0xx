@@ -1,0 +1,119 @@
+version: "4.1"
+name: Project
+type: ARM
+deviceName: PY32F030x8
+packDir: null
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: BSP
+      files:
+        - path: ../../../../../../Drivers/BSP/PY32F030xx_Start_Kit/py32f030xx_ll_Start_Kit.c
+      folders: []
+    - name: Common
+      files:
+        - path: ../Src/system_py32f0xx.c
+        - path: startup_py32f030xx.s
+      folders: []
+    - name: Doc
+      files:
+        - path: ../readme.txt
+      folders: []
+    - name: PY32F0xx_HAL_Driver
+      files:
+        - path: ../../../../../../Drivers/PY32F0xx_HAL_Driver/Src/py32f0xx_ll_utils.c
+      folders: []
+    - name: User
+      files:
+        - path: ../Src/main.c
+        - path: ../Src/py32f0xx_it.c
+      folders: []
+dependenceList: []
+outDir: .
+miscInfo:
+  uid: 36bcf0031e18a3008bbdaa90a96a7987
+targets:
+  Project:
+    cppPreprocessAttrs:
+      defineList:
+        - PY32F030x8
+        - USE_FULL_LL_DRIVER
+      incList:
+        - .
+        - ../Inc
+        - ../../../../../../Drivers/BSP/PY32F030xx_Start_Kit
+        - ../../../../../../Drivers/CMSIS/Include
+        - ../../../../../../Drivers/CMSIS/Device/PY32F0xx/Include
+        - ../../../../../../Drivers/PY32F0xx_HAL_Driver/Inc
+      libList: []
+    excludeList: []
+    toolchain: GCC
+    toolchainConfigMap:
+      GCC:
+        archExtensions: ""
+        cpuType: Cortex-M0+
+        floatingPointHardware: none
+        options:
+          version: 5
+          afterBuildTasks: []
+          asm-compiler:
+            ASM_FLAGS: ""
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: ""
+            C_FLAGS: ""
+            language-c: c11
+            language-cpp: c++11
+            one-elf-section-per-data: true
+            one-elf-section-per-function: true
+            optimization: level-debug
+            warnings: all-warnings
+          global:
+            $float-abi-type: softfp
+            misc-control: --specs=nosys.specs --specs=nano.specs
+            output-debug-info: enable
+          linker:
+            LD_FLAGS: " "
+            LIB_FLAGS: -lm
+            output-format: elf
+            remove-unused-input-sections: true
+        scatterFilePath: py32f030x8.ld
+        storageLayout:
+          RAM: []
+          ROM: []
+        useCustomScatterFile: true
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: PY32F030x8
+          vendor: Puya
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+      OpenOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        interface: cmsis-dap
+        target: py32f030
+      STLink:
+        address: "0x08000000"
+        bin: ""
+        elFile: None
+        optionBytes: .eide/project.st.option.bytes.ini
+        otherCmds: ""
+        proType: SWD
+        resetMode: default
+        runAfterProgram: true
+        speed: 4000
+      pyOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        config: .eide/project.pyocd.yaml
+        otherCmds: '"--pack=${env:PYSDEPATH}\packs\PY32F0xx_DFP.pack"'
+        speed: 4M
+        targetName: PY32F030x8
+    uploader: OpenOCD

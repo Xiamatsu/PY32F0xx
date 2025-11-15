@@ -1,0 +1,8 @@
+-L../../../Drivers/PY32F0xx_HAL_Driver/Src -mcpu=cortex-m0plus -mthumb -T c:/MCU/PY32xx/_ll_Proj/F030_vcc/System/py32f030x6.ld -Wl,--gc-sections -Wl,--print-memory-usage --specs=nano.specs --specs=nosys.specs -Wl,--no-warn-rwx-segments
+-Wl,-Map=./Debug/Test_Vcc.map
+-o ./Debug/Test_Vcc.elf ./Debug/.obj/__/__/__/Drivers/PY32F0xx_HAL_Driver/Src/py32f0xx_ll_utils.o
+./Debug/.obj/__/BSP/py32f030xx_ll_Start_Kit.o
+./Debug/.obj/__/Src/main.o
+./Debug/.obj/__/Src/py32f0xx_it.o
+./Debug/.obj/__/System/startup_py32f030xx.o
+./Debug/.obj/__/System/system_py32f0xx.o -lm

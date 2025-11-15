@@ -1,0 +1,211 @@
+[2025-11-14 15:34:56]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\Drivers\PY32F002B_HAL_Driver\Src\py32f002b_ll_utils.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\BSP\py32f002bxx_ll_Start_Kit.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\py32f002b_it.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\System\startup_py32f002bxx.s': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\System\system_py32f002b.c': object (.o) file not exist
+
+[2025-11-14 15:34:56]	[done]
+	build successfully !
+
+[2025-11-14 15:35:25]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 15:35:26]	[done]
+	build successfully !
+
+[2025-11-14 15:35:50]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 15:35:50]	[done]
+	build successfully !
+
+[2025-11-14 15:39:18]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 15:39:18]	[done]
+	build successfully !
+
+[2025-11-14 15:40:15]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 15:40:15]	[done]
+	build successfully !
+
+[2025-11-14 15:41:11]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 15:41:11]	[done]
+	build successfully !
+
+[2025-11-14 15:42:10]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 15:42:11]	[done]
+	build successfully !
+
+[2025-11-14 16:13:30]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 16:13:30]	compilation failed at : "c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c", exit code: 1
+command: 
+  "C:\Users\User\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe" -c -xc -std=c17 -I../Inc -I../BSP -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -I../../../Drivers/PY32F002B_HAL_Driver/Inc -D"PY32F002Bx5" -D"USE_FULL_LL_DRIVER" -mcpu=cortex-m0plus -mthumb -Os -Wall -g -ffunction-sections -fdata-sections -flto -funsigned-char --specs=nano.specs --specs=nosys.specs -o ./Release/.obj/__/Src/main.o -MMD ./../Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./../Src/main.c: In function 'main':
+./../Src/main.c:148:5: error: implicit declaration of function 'LL_ADC_REG_SetSequencerRem'; did you mean 'LL_ADC_REG_SetSequencerChRem'? [-Wimplicit-function-declaration]
+  148 |     LL_ADC_REG_SetSequencerRem(ADC1, LL_ADC_CHANNEL_TEMPSENSOR );
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     LL_ADC_REG_SetSequencerChRem
+./../Src/main.c: At top level:
+./../Src/main.c:273:13: warning: 'APP_AdcDisable' defined but not used [-Wunused-function]
+  273 | static void APP_AdcDisable(void)
+      |             ^~~~~~~~~~~~~~
+
+[2025-11-14 16:13:58]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 16:13:59]	compilation failed at : "c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c", exit code: 1
+command: 
+  "C:\Users\User\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe" -c -xc -std=c17 -I../Inc -I../BSP -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -I../../../Drivers/PY32F002B_HAL_Driver/Inc -D"PY32F002Bx5" -D"USE_FULL_LL_DRIVER" -mcpu=cortex-m0plus -mthumb -Os -Wall -g -ffunction-sections -fdata-sections -flto -funsigned-char --specs=nano.specs --specs=nosys.specs -o ./Release/.obj/__/Src/main.o -MMD ./../Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./../Src/main.c: In function 'main':
+./../Src/main.c:148:5: error: implicit declaration of function 'LL_ADC_REG_SetSequencerRem'; did you mean 'LL_ADC_REG_SetSequencerChRem'? [-Wimplicit-function-declaration]
+  148 |     LL_ADC_REG_SetSequencerRem(ADC1, LL_ADC_CHANNEL_TEMPSENSOR );
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     LL_ADC_REG_SetSequencerChRem
+./../Src/main.c: At top level:
+./../Src/main.c:273:13: warning: 'APP_AdcDisable' defined but not used [-Wunused-function]
+  273 | static void APP_AdcDisable(void)
+      |             ^~~~~~~~~~~~~~
+
+[2025-11-14 16:14:16]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 16:14:16]	compilation failed at : "c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c", exit code: 1
+command: 
+  "C:\Users\User\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe" -c -xc -std=c17 -I../Inc -I../BSP -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -I../../../Drivers/PY32F002B_HAL_Driver/Inc -D"PY32F002Bx5" -D"USE_FULL_LL_DRIVER" -mcpu=cortex-m0plus -mthumb -Os -Wall -g -ffunction-sections -fdata-sections -flto -funsigned-char --specs=nano.specs --specs=nosys.specs -o ./Release/.obj/__/Src/main.o -MMD ./../Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./../Src/main.c: In function 'main':
+./../Src/main.c:148:5: error: implicit declaration of function 'LL_ADC_REG_SetSequencerRem'; did you mean 'LL_ADC_REG_SetSequencerChRem'? [-Wimplicit-function-declaration]
+  148 |     LL_ADC_REG_SetSequencerRem(ADC1, LL_ADC_CHANNEL_TEMPSENSOR );
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     LL_ADC_REG_SetSequencerChRem
+./../Src/main.c: At top level:
+./../Src/main.c:273:13: warning: 'APP_AdcDisable' defined but not used [-Wunused-function]
+  273 | static void APP_AdcDisable(void)
+      |             ^~~~~~~~~~~~~~
+
+[2025-11-14 16:14:44]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 16:14:44]	[done]
+	build successfully !
+
+[2025-11-14 16:16:29]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 16:16:29]	[done]
+	build successfully !
+
+[2025-11-14 16:19:45]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 16:19:45]	[done]
+	build successfully !
+
+[2025-11-14 22:51:30]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 22:51:30]	[done]
+	build successfully !
+
+[2025-11-14 22:53:56]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 22:53:56]	[done]
+	build successfully !
+
+[2025-11-14 23:00:45]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 23:00:45]	[done]
+	build successfully !
+
+[2025-11-14 23:02:20]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 23:02:20]	compilation failed at : "c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c", exit code: 1
+command: 
+  "C:\Users\User\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe" -c -xc -std=c17 -I../Inc -I../BSP -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -I../../../Drivers/PY32F002B_HAL_Driver/Inc -D"PY32F002Bx5" -D"USE_FULL_LL_DRIVER" -mcpu=cortex-m0plus -mthumb -Os -Wall -g -ffunction-sections -fdata-sections -flto -funsigned-char --specs=nano.specs --specs=nosys.specs -o ./Release/.obj/__/Src/main.o -MMD ./../Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./../Src/main.c: In function 'main':
+./../Src/main.c:122:5: error: implicit declaration of function 'LL_uDelay'; did you mean 'LL_mDelay'? [-Wimplicit-function-declaration]
+  122 |     LL_uDelay(10);
+      |     ^~~~~~~~~
+      |     LL_mDelay
+./../Src/main.c:69:12: warning: unused variable 'wait_loop_index' [-Wunused-variable]
+   69 |   uint32_t wait_loop_index;
+      |            ^~~~~~~~~~~~~~~
+./../Src/main.c: At top level:
+./../Src/main.c:328:13: warning: 'APP_AdcDisable' defined but not used [-Wunused-function]
+  328 | static void APP_AdcDisable(void)
+      |             ^~~~~~~~~~~~~~
+./../Src/main.c:165:17: warning: 'APP_AdcConvert' defined but not used [-Wunused-function]
+  165 | static uint32_t APP_AdcConvert(uint32_t channel)
+      |                 ^~~~~~~~~~~~~~
+
+[2025-11-14 23:04:45]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 23:04:46]	[done]
+	build successfully !
+
+[2025-11-14 23:05:03]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_examples\F002B_vcc\Src\main.c': source file has been changed.
+
+[2025-11-14 23:05:03]	[done]
+	build successfully !
+

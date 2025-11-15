@@ -1,0 +1,186 @@
+version: "4.1"
+name: Test_Vcc
+type: ARM
+deviceName: PY32F002Bx5
+packDir: null
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: BSP
+      files:
+        - path: ../BSP/py32f030xx_ll_Start_Kit.c
+      folders: []
+    - name: Common
+      files:
+        - path: ../System/startup_py32f030xx.s
+        - path: ../System/system_py32f0xx.c
+      folders: []
+    - name: PY32F030_HAL_Driver
+      files:
+        - path: ../../../Drivers/PY32F0xx_HAL_Driver/Src/py32f0xx_ll_utils.c
+      folders: []
+    - name: User
+      files:
+        - path: ../Src/main.c
+        - path: ../Src/py32f0xx_it.c
+      folders: []
+dependenceList: []
+outDir: .
+miscInfo:
+  uid: 36bcf0031e18a3008bbdaa90a96a7998
+targets:
+  Debug:
+    cppPreprocessAttrs:
+      defineList:
+        - PY32F030x6
+        - USE_FULL_LL_DRIVER
+      incList:
+        - ../Inc
+        - ../BSP
+        - ../../../Drivers/CMSIS/Include
+        - ../../../Drivers/CMSIS/Device/PY32F0xx/Include
+        - ../../../Drivers/PY32F0xx_HAL_Driver/Inc
+      libList:
+        - ../../../Drivers/PY32F0xx_HAL_Driver/Src
+    excludeList: []
+    toolchain: GCC
+    toolchainConfigMap:
+      GCC:
+        archExtensions: ""
+        cpuType: Cortex-M0+
+        floatingPointHardware: none
+        options:
+          version: 5
+          afterBuildTasks:
+            - name: make disasm
+              abortAfterFailed: false
+              command: arm-none-eabi-objdump -S ${OutDir}\${ProjectName}.elf > ${OutDir}\${ProjectName}.lst
+              disable: false
+          asm-compiler: {}
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            language-c: c17
+            language-cpp: c++17
+            one-elf-section-per-data: true
+            one-elf-section-per-function: true
+            optimization: level-debug
+            warnings: all-warnings
+          global:
+            $float-abi-type: softfp
+            arm-thumb-mode: thumb
+            not-use-syscalls: true
+            output-debug-info: enable
+            use-newlib-nano: true
+          linker:
+            $toolName: auto
+            LD_FLAGS: -Wl,--no-warn-rwx-segments
+            LIB_FLAGS: -lm
+            output-format: elf
+            remove-unused-input-sections: true
+        scatterFilePath: ../System/py32f030x6.ld
+        storageLayout:
+          RAM: []
+          ROM: []
+        useCustomScatterFile: true
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: PY32F030x6
+          vendor: Puya
+        otherCmds: ""
+        proType: 1
+        speed: 1000
+      OpenOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        interface: cmsis-dap
+        target: py32f030
+      pyOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        config: .eide/debug.pyocd.yaml
+        otherCmds: '"--pack=..\..\..\Packs\PY32F0xx_DFP.pack"'
+        speed: 4M
+        targetName: PY32F002Bx5
+    uploader: pyOCD
+  Release:
+    cppPreprocessAttrs:
+      defineList:
+        - PY32F030x6
+        - USE_FULL_LL_DRIVER
+      incList:
+        - ../Inc
+        - ../BSP
+        - ../../../Drivers/CMSIS/Include
+        - ../../../Drivers/CMSIS/Device/PY32F0xx/Include
+        - ../../../Drivers/PY32F0xx_HAL_Driver/Inc
+      libList:
+        - ../../../Drivers/PY32F0xx_HAL_Driver/Src
+    excludeList: []
+    toolchain: GCC
+    toolchainConfigMap:
+      GCC:
+        archExtensions: ""
+        cpuType: Cortex-M0+
+        floatingPointHardware: none
+        options:
+          version: 5
+          afterBuildTasks:
+            - name: make disasm
+              abortAfterFailed: false
+              command: arm-none-eabi-objdump -S ${OutDir}\${ProjectName}.elf > ${OutDir}\${ProjectName}.lst
+              disable: false
+          asm-compiler: {}
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            language-c: c17
+            language-cpp: c++17
+            one-elf-section-per-data: true
+            one-elf-section-per-function: true
+            optimization: level-size
+            optimization-lto: true
+            warnings: all-warnings
+          global:
+            $float-abi-type: softfp
+            arm-thumb-mode: thumb
+            not-use-syscalls: true
+            output-debug-info: enable
+            use-newlib-nano: true
+          linker:
+            $toolName: auto
+            LD_FLAGS: -Wl,--no-warn-rwx-segments
+            LIB_FLAGS: -lm
+            output-format: elf
+            remove-unused-input-sections: true
+        scatterFilePath: ../System/py32f030x6.ld
+        storageLayout:
+          RAM: []
+          ROM: []
+        useCustomScatterFile: true
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: PY32F030x6
+          vendor: Puya
+        otherCmds: ""
+        proType: 1
+        speed: 1000
+      OpenOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        interface: cmsis-dap
+        target: py32f030
+      pyOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        config: .eide/release.pyocd.yaml
+        otherCmds: '"--pack=..\..\..\Packs\PY32F0xx_DFP.pack"'
+        speed: 4M
+        targetName: PY32F030x6
+    uploader: pyOCD

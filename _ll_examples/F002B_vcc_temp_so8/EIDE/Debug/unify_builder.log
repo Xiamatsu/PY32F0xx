@@ -1,0 +1,59 @@
+[2025-11-13 09:11:01]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\Drivers\PY32F002B_HAL_Driver\Src\py32f002b_ll_utils.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\BSP\py32f002bxx_ll_Start_Kit.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\Src\main.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\Src\py32f002b_it.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\startup_py32f002bxx.s': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\system_py32f002b.c': object (.o) file not exist
+
+[2025-11-13 09:11:02]	compilation failed at : "c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\startup_py32f002bxx.s", exit code: 1
+command: 
+  "C:\Users\User\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe" -c -x assembler-with-cpp -I../Inc -I../BSP -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -I../../../Drivers/PY32F002B_HAL_Driver/Inc -mcpu=cortex-m0plus -mthumb -g --specs=nosys.specs --specs=nano.specs -o ./Debug/.obj/__/System/startup_py32f002bxx.o -MMD ./../System/startup_py32f002bxx.s
+   at unify_builder.Program.Main(String[] args_)
+---
+./../System/startup_py32f002bxx.s: Assembler messages:
+./../System/startup_py32f002bxx.s:1: Error: junk at end of line, first unrecognized character is `-'
+./../System/startup_py32f002bxx.s:2: Error: bad size 0 in type specifier
+./../System/startup_py32f002bxx.s:2: Error: bad instruction `startup_py32f002bxx.s'
+
+[2025-11-13 09:12:04]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\startup_py32f002bxx.s': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\system_py32f002b.c': object (.o) file not exist
+
+[2025-11-13 09:12:04]	[done]
+	build successfully !
+
+[2025-11-13 09:28:43]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\Drivers\PY32F002B_HAL_Driver\Src\py32f002b_ll_utils.c': compiler options has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\BSP\py32f002bxx_ll_Start_Kit.c': compiler options has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\Src\main.c': compiler options has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\Src\py32f002b_it.c': compiler options has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\startup_py32f002bxx.s': compiler options has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\system_py32f002b.c': compiler options has been changed.
+
+[2025-11-13 09:28:44]	[done]
+	build successfully !
+
+[2025-11-13 10:16:53]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\stub.c': object (.o) file not exist
+
+[2025-11-13 10:16:53]	[done]
+	build successfully !
+
+[2025-11-13 10:17:48]	[done]
+	build successfully !
+
+[2025-11-13 10:18:31]	[done]
+	build successfully !
+
+[2025-11-13 10:19:16]	[done]
+	build successfully !
+

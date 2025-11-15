@@ -1,0 +1,18 @@
+[2025-11-12 15:10:50]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'c:\MCU\py32mini\miniProjects\F030_Blink\Src\main.c': object (.o) file not exist
+'c:\MCU\py32mini\miniProjects\F030_Blink\Src\py32f0xx_it.c': object (.o) file not exist
+'c:\MCU\py32mini\miniProjects\F030_Blink\System\startup_py32f030xx.s': object (.o) file not exist
+'c:\MCU\py32mini\miniProjects\F030_Blink\System\system_py32f0xx.c': object (.o) file not exist
+
+[2025-11-12 15:10:51]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+C:/Users/User/.eide/tools/gcc_arm/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: cannot open linker script file c:/MCU/py32mini/miniProjects/F030_Blink/System/py32f030x6.ld: Invalid argument
+collect2.exe: error: ld returned 1 exit status
+
+
+[2025-11-12 15:11:47]	[done]
+	build successfully !
+

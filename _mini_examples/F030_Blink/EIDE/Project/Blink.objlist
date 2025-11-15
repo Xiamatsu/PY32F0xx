@@ -1,0 +1,4 @@
+./Project/.obj/__/Src/main.o
+./Project/.obj/__/Src/py32f0xx_it.o
+./Project/.obj/__/System/startup_py32f030xx.o
+./Project/.obj/__/System/system_py32f0xx.o

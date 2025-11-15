@@ -1,0 +1,158 @@
+[2025-11-13 09:11:01]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\Drivers\PY32F002B_HAL_Driver\Src\py32f002b_ll_utils.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\BSP\py32f002bxx_ll_Start_Kit.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\Src\main.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\Src\py32f002b_it.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\startup_py32f002bxx.s': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\system_py32f002b.c': object (.o) file not exist
+
+[2025-11-13 09:11:02]	compilation failed at : "c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\startup_py32f002bxx.s", exit code: 1
+command: 
+  "C:\Users\User\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe" -c -x assembler-with-cpp -I../Inc -I../BSP -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -I../../../Drivers/PY32F002B_HAL_Driver/Inc -mcpu=cortex-m0plus -mthumb -g --specs=nosys.specs --specs=nano.specs -o ./Debug/.obj/__/System/startup_py32f002bxx.o -MMD ./../System/startup_py32f002bxx.s
+   at unify_builder.Program.Main(String[] args_)
+---
+./../System/startup_py32f002bxx.s: Assembler messages:
+./../System/startup_py32f002bxx.s:1: Error: junk at end of line, first unrecognized character is `-'
+./../System/startup_py32f002bxx.s:2: Error: bad size 0 in type specifier
+./../System/startup_py32f002bxx.s:2: Error: bad instruction `startup_py32f002bxx.s'
+
+[2025-11-13 09:12:04]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\startup_py32f002bxx.s': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\system_py32f002b.c': object (.o) file not exist
+
+[2025-11-13 09:12:04]	[done]
+	build successfully !
+
+[2025-11-13 09:28:43]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\Drivers\PY32F002B_HAL_Driver\Src\py32f002b_ll_utils.c': compiler options has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\BSP\py32f002bxx_ll_Start_Kit.c': compiler options has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\Src\main.c': compiler options has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\Src\py32f002b_it.c': compiler options has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\startup_py32f002bxx.s': compiler options has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\system_py32f002b.c': compiler options has been changed.
+
+[2025-11-13 09:28:44]	[done]
+	build successfully !
+
+[2025-11-13 10:16:53]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_Proj\F002B_vcc\System\stub.c': object (.o) file not exist
+
+[2025-11-13 10:16:53]	[done]
+	build successfully !
+
+[2025-11-13 10:17:48]	[done]
+	build successfully !
+
+[2025-11-13 10:18:31]	[done]
+	build successfully !
+
+[2025-11-13 10:19:16]	[done]
+	build successfully !
+
+[2025-11-13 11:53:27]	[info] incremental build: 6 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\Drivers\PY32F0xx_HAL_Driver\Src\py32f0xx_ll_utils.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\BSP\py32f030xx_ll_Start_Kit.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\main.c': compiler options has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\py32f0xx_it.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\System\startup_py32f030xx.s': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\System\system_py32f0xx.c': object (.o) file not exist
+
+[2025-11-13 11:53:27]	compilation failed at : "c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\main.c", exit code: 1
+command: 
+  "C:\Users\User\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe" -c -xc -std=c17 -I../Inc -I../BSP -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -I../../../Drivers/PY32F0xx_HAL_Driver/Inc -D"PY32F030x6" -D"USE_FULL_LL_DRIVER" -mcpu=cortex-m0plus -mthumb -Og -Wall -g -ffunction-sections -fdata-sections -funsigned-char --specs=nano.specs --specs=nosys.specs -o ./Debug/.obj/__/Src/main.o -MMD ./../Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+In file included from ./../Src/main.c:32:
+../Inc/main.h:41:10: fatal error: py32f002b_ll_rcc.h: No such file or directory
+   41 | #include "py32f002b_ll_rcc.h"
+      |          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+[2025-11-13 11:54:20]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\main.c': source file has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\py32f0xx_it.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\System\startup_py32f030xx.s': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\System\system_py32f0xx.c': object (.o) file not exist
+
+[2025-11-13 11:54:21]	compilation failed at : "c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\main.c", exit code: 1
+command: 
+  "C:\Users\User\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe" -c -xc -std=c17 -I../Inc -I../BSP -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -I../../../Drivers/PY32F0xx_HAL_Driver/Inc -D"PY32F030x6" -D"USE_FULL_LL_DRIVER" -mcpu=cortex-m0plus -mthumb -Og -Wall -g -ffunction-sections -fdata-sections -funsigned-char --specs=nano.specs --specs=nosys.specs -o ./Debug/.obj/__/Src/main.o -MMD ./../Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+In file included from ./../Src/main.c:32:
+../Inc/main.h:41:10: fatal error: py32f002b_ll_rcc.h: No such file or directory
+   41 | #include "py32f002b_ll_rcc.h"
+      |          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+[2025-11-13 11:54:56]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\main.c': source file has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\py32f0xx_it.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\System\startup_py32f030xx.s': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\System\system_py32f0xx.c': object (.o) file not exist
+
+[2025-11-13 11:54:56]	compilation failed at : "c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\main.c", exit code: 1
+command: 
+  "C:\Users\User\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe" -c -xc -std=c17 -I../Inc -I../BSP -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -I../../../Drivers/PY32F0xx_HAL_Driver/Inc -D"PY32F030x6" -D"USE_FULL_LL_DRIVER" -mcpu=cortex-m0plus -mthumb -Og -Wall -g -ffunction-sections -fdata-sections -funsigned-char --specs=nano.specs --specs=nosys.specs -o ./Debug/.obj/__/Src/main.o -MMD ./../Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./../Src/main.c:33:10: fatal error: py32f0xx_ll_Start_Kit.h: No such file or directory
+   33 | #include "py32f0xx_ll_Start_Kit.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+[2025-11-13 11:55:42]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\main.c': source file has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\py32f0xx_it.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\System\startup_py32f030xx.s': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\System\system_py32f0xx.c': object (.o) file not exist
+
+[2025-11-13 11:55:43]	compilation failed at : "c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\main.c", exit code: 1
+command: 
+  "C:\Users\User\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe" -c -xc -std=c17 -I../Inc -I../BSP -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -I../../../Drivers/PY32F0xx_HAL_Driver/Inc -D"PY32F030x6" -D"USE_FULL_LL_DRIVER" -mcpu=cortex-m0plus -mthumb -Og -Wall -g -ffunction-sections -fdata-sections -funsigned-char --specs=nano.specs --specs=nosys.specs -o ./Debug/.obj/__/Src/main.o -MMD ./../Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./../Src/main.c: In function 'main':
+./../Src/main.c:76:27: error: 'LL_IOP_GRP1_PERIPH_GPIOC' undeclared (first use in this function); did you mean 'LL_IOP_GRP1_PERIPH_GPIOB'?
+   76 |   LL_IOP_GRP1_EnableClock(LL_IOP_GRP1_PERIPH_GPIOC);
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                           LL_IOP_GRP1_PERIPH_GPIOB
+./../Src/main.c:76:27: note: each undeclared identifier is reported only once for each function it appears in
+./../Src/main.c:77:22: error: 'GPIOC' undeclared (first use in this function); did you mean 'GPIOF'?
+   77 |   LL_GPIO_SetPinMode(GPIOC, LL_GPIO_PIN_0, LL_GPIO_MODE_ANALOG);
+      |                      ^~~~~
+      |                      GPIOF
+./../Src/main.c:120:39: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'long unsigned int' [-Wformat=]
+  120 |     printf("VREF_C=0x%04X ADC=%u Vdd=%umv\n", VREF_CAL, ADC_Vdd, K_Vdd / ADC_Vdd);
+      |                                      ~^                          ~~~~~~~~~~~~~~~
+      |                                       |                                |
+      |                                       unsigned int                     long unsigned int
+      |                                      %lu
+
+[2025-11-13 11:56:41]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\main.c': source file has been changed.
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\Src\py32f0xx_it.c': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\System\startup_py32f030xx.s': object (.o) file not exist
+'c:\MCU\PY32xx\_ll_Proj\F030_vcc\System\system_py32f0xx.c': object (.o) file not exist
+
+[2025-11-13 11:56:41]	[done]
+	build successfully !
+

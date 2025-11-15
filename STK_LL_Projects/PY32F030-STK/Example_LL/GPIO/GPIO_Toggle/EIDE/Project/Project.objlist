@@ -1,0 +1,6 @@
+./Project/.obj/__/__/__/__/__/__/Drivers/BSP/PY32F030xx_Start_Kit/py32f030xx_ll_Start_Kit.o
+./Project/.obj/__/__/__/__/__/__/Drivers/PY32F0xx_HAL_Driver/Src/py32f0xx_ll_utils.o
+./Project/.obj/__/Src/main.o
+./Project/.obj/__/Src/py32f0xx_it.o
+./Project/.obj/__/Src/system_py32f0xx.o
+./Project/.obj/startup_py32f030xx.o

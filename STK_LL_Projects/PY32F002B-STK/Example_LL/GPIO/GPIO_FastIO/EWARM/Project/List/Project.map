@@ -1,0 +1,277 @@
+###############################################################################
+#
+# IAR ELF Linker V9.70.1.475/W64 for ARM                  06/Nov/2025  15:12:30
+# Copyright 2007-2025 IAR Systems AB.
+#
+#    Output file  =
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Exe\Project.out
+#    Map file     =
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\List\Project.map
+#    Command line =
+#        -f
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Exe\Project.out.rsp
+#        (C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\User_7280784329937237312.dir\main.o
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\User_7280784329937237312.dir\py32f002b_it.o
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\PY32F002B_HAL_Driver_9641674301685084051.dir\py32f002b_ll_gpio.o
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\PY32F002B_HAL_Driver_9641674301685084051.dir\py32f002b_ll_utils.o
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\BSP_16987466797925798938.dir\py32f002bxx_ll_Start_Kit.o
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\EWARM_7214922893274846302.dir\startup_py32f002bxx.o
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\CMSIS_6603591812247902717.dir\system_py32f002b.o
+#        --no_out_extension -o
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Exe\Project.out
+#        --map
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\List\Project.map
+#        --config
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\py32f002bx5_flash.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale
+#        --cpu=Cortex-M0+ --fpu=None) --diagnostics_format=sarif_stdout
+#        --dependencies=n
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Exe\Project.out.iar_deps
+#        --dynamic_output
+#        C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Exe\Project.out.iar_dynout
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, there are calls to deallocation functions in the
+application, and the application appears to be primarily
+optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 {  ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'5fff] {  ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 0, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'0bff] {
+           rw,  block CSTACK,  block HEAP };
+initialize by copy {  rw };
+
+  Section            Kind         Address  Alignment   Size  Object
+  -------            ----         -------  ---------   ----  ------
+"A0":                                                  0xc0
+  .intvec            ro code   0x800'0000          4   0xc0  startup_py32f002bxx.o [3]
+                             - 0x800'00c0              0xc0
+
+"P1":                                                 0x38c
+  .text              ro code   0x800'00c0          4  0x148  main.o [5]
+  .text              ro code   0x800'0208          4   0x28  py32f002b_ll_utils.o [4]
+  .text              ro code   0x800'0230          2   0xae  I32DivModFast.o [7]
+  .text              ro code   0x800'02de          2    0xa  py32f002b_it.o [5]
+  .text              ro code   0x800'02e8          4    0x2  IntDivZer.o [7]
+  .text              ro code   0x800'02ea          2    0x2  startup_py32f002bxx.o [3]
+  .text              ro code   0x800'02ec          4   0x5c  system_py32f002b.o [2]
+  .text              ro code   0x800'0348          2   0x30  copy_init3.o [7]
+  .text              ro code   0x800'0378          4   0x28  data_init.o [7]
+  .text              ro code   0x800'03a0          4   0x22  cmain.o [7]
+  .text              ro code   0x800'03c2          2    0x4  low_level_init.o [6]
+  .text              ro code   0x800'03c6          2    0x8  exit.o [6]
+  .text              ro code   0x800'03ce          2    0x2  startup_py32f002bxx.o [3]
+  .text              ro code   0x800'03d0          4    0x4  cexit.o [7]
+  .text              ro code   0x800'03d4          4    0xa  cexit_2.o [7]
+  .text              ro code   0x800'03de          2    0x2  startup_py32f002bxx.o [3]
+  .text              ro code   0x800'03e0          4   0x14  exit.o [8]
+  .iar.init_table    const     0x800'03f4          4   0x14  - Linker created -
+  .text              ro code   0x800'0408          4   0x1c  cstartup_M.o [7]
+  .text              ro code   0x800'0424          4   0x10  startup_py32f002bxx.o [3]
+  Initializer bytes  const     0x800'0434          4    0x4  <for P2-1>
+  .text              ro code   0x800'0438          2    0x2  startup_py32f002bxx.o [3]
+  .text              ro code   0x800'043a          2    0x2  startup_py32f002bxx.o [3]
+  .text              ro code   0x800'043c          2    0x2  startup_py32f002bxx.o [3]
+  .text              ro code   0x800'043e          2    0x2  startup_py32f002bxx.o [3]
+  .text              ro code   0x800'0440          2    0x2  startup_py32f002bxx.o [3]
+  .text              ro code   0x800'0442          2    0x2  startup_py32f002bxx.o [3]
+  .text              ro code   0x800'0444          2    0x2  startup_py32f002bxx.o [3]
+  .text              ro code   0x800'0446          2    0x2  startup_py32f002bxx.o [3]
+  .text              ro code   0x800'0448          2    0x2  startup_py32f002bxx.o [3]
+  .text              ro code   0x800'044a          2    0x2  startup_py32f002bxx.o [3]
+  .rodata            const     0x800'044c               0x0  copy_init3.o [7]
+                             - 0x800'044c             0x38c
+
+"P2", part 1 of 2:                                      0x4
+  P2-1                        0x2000'0000          4    0x4  <Init block>
+    .data            inited   0x2000'0000          4    0x4  system_py32f002b.o [2]
+                            - 0x2000'0004               0x4
+
+"P2", part 2 of 2:                                    0x400
+  CSTACK                      0x2000'0008          8  0x400  <Block>
+    CSTACK           uninit   0x2000'0008             0x400  <Block tail>
+                            - 0x2000'0408             0x400
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'044c   0x800'5fff  0x5bb4
+  0x2000'0004  0x2000'0007     0x4
+  0x2000'0408  0x2000'0bff   0x7f8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4:
+           0x800'0434   0x4
+    1 destination range, total size 0x4:
+          0x2000'0000   0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+command line/config:
+    ------------------------------------------------
+    Total:
+
+C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\BSP_16987466797925798938.dir: [1]
+    ------------------------------------------------
+    Total:
+
+C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\CMSIS_6603591812247902717.dir: [2]
+    system_py32f002b.o          92        4        4
+    ------------------------------------------------
+    Total:                      92        4        4
+
+C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\EWARM_7214922893274846302.dir: [3]
+    startup_py32f002bxx.o      234
+    ------------------------------------------------
+    Total:                     234
+
+C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\PY32F002B_HAL_Driver_9641674301685084051.dir: [4]
+    py32f002b_ll_utils.o        40
+    ------------------------------------------------
+    Total:                      40
+
+C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\User_7280784329937237312.dir: [5]
+    main.o                     328
+    py32f002b_it.o              10
+    ------------------------------------------------
+    Total:                     338
+
+dl6M_tln.a: [6]
+    exit.o                       8
+    low_level_init.o             4
+    ------------------------------------------------
+    Total:                      12
+
+rt6M_tl.a: [7]
+    I32DivModFast.o            174
+    IntDivZer.o                  2
+    cexit.o                      4
+    cexit_2.o                   10
+    cmain.o                     34
+    copy_init3.o                48
+    cstartup_M.o                28
+    data_init.o                 40
+    ------------------------------------------------
+    Total:                     340
+
+shb_l.a: [8]
+    exit.o                      20
+    ------------------------------------------------
+    Total:                      20
+
+    Linker created                       20    1'024
+----------------------------------------------------
+    Grand Total:             1'076       24    1'028
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'03f4          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'0408          --   Gb  - Linker created -
+?main                    0x800'03a1         Code  Gb  cmain.o [7]
+ADC_COMP_IRQHandler      0x800'043d         Code  Wk  startup_py32f002bxx.o [3]
+CSTACK$$Base            0x2000'0008          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0408          --   Gb  - Linker created -
+EXTI0_1_IRQHandler       0x800'03df         Code  Wk  startup_py32f002bxx.o [3]
+EXTI2_3_IRQHandler       0x800'0439         Code  Wk  startup_py32f002bxx.o [3]
+EXTI4_15_IRQHandler      0x800'043b         Code  Wk  startup_py32f002bxx.o [3]
+FLASH_IRQHandler         0x800'02eb         Code  Wk  startup_py32f002bxx.o [3]
+HardFault_Handler        0x800'02e1    0x2  Code  Gb  py32f002b_it.o [5]
+I2C1_IRQHandler          0x800'0447         Code  Wk  startup_py32f002bxx.o [3]
+LL_Init1msTick           0x800'0209   0x1a  Code  Gb  py32f002b_ll_utils.o [4]
+LL_SetSystemCoreClock    0x800'0223    0x6  Code  Gb  py32f002b_ll_utils.o [4]
+LPTIM1_IRQHandler        0x800'0443         Code  Wk  startup_py32f002bxx.o [3]
+NMI_Handler              0x800'02df    0x2  Code  Gb  py32f002b_it.o [5]
+PendSV_Handler           0x800'02e5    0x2  Code  Gb  py32f002b_it.o [5]
+RCC_IRQHandler           0x800'03cf         Code  Wk  startup_py32f002bxx.o [3]
+Region$$Table$$Base      0x800'03f4          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'0408          --   Gb  - Linker created -
+Reset_Handler            0x800'0425         Code  Wk  startup_py32f002bxx.o [3]
+SPI1_IRQHandler          0x800'0449         Code  Wk  startup_py32f002bxx.o [3]
+SVC_Handler              0x800'02e3    0x2  Code  Gb  py32f002b_it.o [5]
+SysTick_Handler          0x800'02e7    0x2  Code  Gb  py32f002b_it.o [5]
+SystemCoreClock         0x2000'0000    0x4  Data  Gb  system_py32f002b.o [2]
+SystemInit               0x800'02ed   0x42  Code  Gb  system_py32f002b.o [2]
+TIM14_IRQHandler         0x800'0445         Code  Wk  startup_py32f002bxx.o [3]
+TIM1_BRK_UP_TRG_COM_IRQHandler
+                         0x800'043f         Code  Wk  startup_py32f002bxx.o [3]
+TIM1_CC_IRQHandler       0x800'0441         Code  Wk  startup_py32f002bxx.o [3]
+USART1_IRQHandler        0x800'044b         Code  Wk  startup_py32f002bxx.o [3]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000'0bff          --   Gb  <internal module>
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x2000'0000          --   Gb  <internal module>
+__aeabi_idiv0            0x800'02e9         Code  Gb  IntDivZer.o [7]
+__aeabi_uidiv            0x800'0231         Code  Gb  I32DivModFast.o [7]
+__aeabi_uidivmod         0x800'0231         Code  Gb  I32DivModFast.o [7]
+__cmain                  0x800'03a1         Code  Gb  cmain.o [7]
+__exit                   0x800'03e1   0x14  Code  Gb  exit.o [8]
+__iar_copy_init3         0x800'0349   0x30  Code  Gb  copy_init3.o [7]
+__iar_data_init3         0x800'0379   0x28  Code  Gb  data_init.o [7]
+__iar_program_start      0x800'0409         Code  Gb  cstartup_M.o [7]
+__low_level_init         0x800'03c3    0x4  Code  Gb  low_level_init.o [6]
+__vector_table           0x800'0000         Data  Gb  startup_py32f002bxx.o [3]
+_call_main               0x800'03ad         Code  Gb  cmain.o [7]
+_exit                    0x800'03d1         Code  Gb  cexit.o [7]
+_exit_2                  0x800'03d5         Code  Gb  cexit_2.o [7]
+exit                     0x800'03c7    0x8  Code  Gb  exit.o [6]
+main                     0x800'00c1  0x138  Code  Gb  main.o [5]
+
+
+[1] = C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\BSP_16987466797925798938.dir
+[2] = C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\CMSIS_6603591812247902717.dir
+[3] = C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\EWARM_7214922893274846302.dir
+[4] = C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\PY32F002B_HAL_Driver_9641674301685084051.dir
+[5] = C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Obj\User_7280784329937237312.dir
+[6] = dl6M_tln.a
+[7] = rt6M_tl.a
+[8] = shb_l.a
+
+  1'076 bytes of readonly  code memory
+     24 bytes of readonly  data memory
+  1'028 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

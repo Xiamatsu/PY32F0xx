@@ -1,0 +1,13 @@
+C:\iar\ewarm-9.70.1\arm\bin\armproc.dll
+
+ C:\iar\ewarm-9.70.1\arm\bin\armjet.dll
+
+ C:\PY32\Projects\PY32F002B-STK\Example_LL\GPIO\GPIO_FastIO\EWARM\Project\Exe\Project.out
+
+ --plugin=C:\iar\ewarm-9.70.1\arm\bin\armLibSupportUniversal.dll
+
+ --flash_loader=C:\iar\ewarm-9.70.1\arm/config/flashloader/Puya/FlashPY32F002Bx5.board
+
+ 
+
+

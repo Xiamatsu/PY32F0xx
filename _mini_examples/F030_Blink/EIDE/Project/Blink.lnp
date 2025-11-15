@@ -1,0 +1,6 @@
+-L../../../Drivers/CMSIS/Device/PY32F0xx/Source -mcpu=cortex-m0plus -mthumb -T c:/MCU/py32mini/miniProjects/F030_Blink/System/py32f030x6.ld -Wl,--gc-sections -Wl,--print-memory-usage --specs=nano.specs -Wl,--no-warn-rwx-segments
+-Wl,-Map=./Project/Blink.map
+-o ./Project/Blink.elf ./Project/.obj/__/Src/main.o
+./Project/.obj/__/Src/py32f0xx_it.o
+./Project/.obj/__/System/startup_py32f030xx.o
+./Project/.obj/__/System/system_py32f0xx.o -lm

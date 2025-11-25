@@ -15,6 +15,8 @@
 LL
   F002B_vcc_temp      (TX -  PB4) 
   F002B_vcc_temp_so8  (TX -  PA7) 
+mini
+  F002B_LPx - запуск с низким потреблением и тестирование Flash Sleep  
 ```
 
 ###  PY32F0xx

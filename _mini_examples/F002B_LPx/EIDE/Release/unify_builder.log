@@ -1,0 +1,11 @@
+[2025-11-25 17:47:52]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'c:\ACHIP\Xiamatsu\PY32F_eide\_mini_examples\F002B_LPx\Src\main.c': object (.o) file not exist
+'c:\ACHIP\Xiamatsu\PY32F_eide\_mini_examples\F002B_LPx\Src\py32f002b_it.c': object (.o) file not exist
+'c:\ACHIP\Xiamatsu\PY32F_eide\_mini_examples\F002B_LPx\System\startup_py32f002bxx.s': object (.o) file not exist
+'c:\ACHIP\Xiamatsu\PY32F_eide\_mini_examples\F002B_LPx\System\system_py32f002b.c': object (.o) file not exist
+
+[2025-11-25 17:47:53]	[done]
+	build successfully !
+

@@ -1,0 +1,6 @@
+-L../../../Drivers/CMSIS/Device/PY32F0xx/Source -mcpu=cortex-m0plus -mthumb -T c:/ACHIP/Xiamatsu/PY32F_eide/_mini_examples/F002B_LPx/System/py32f002bx5.ld -Wl,--gc-sections -Wl,--print-memory-usage --specs=nano.specs -Wl,--no-warn-rwx-segments
+-Wl,-Map=./Release/LPstart.map
+-o ./Release/LPstart.elf ./Release/.obj/__/Src/main.o
+./Release/.obj/__/Src/py32f002b_it.o
+./Release/.obj/__/System/startup_py32f002bxx.o
+./Release/.obj/__/System/system_py32f002b.o -lm

@@ -1,0 +1,5 @@
+[Define]
+0=PY32F002Bx5
+[User]
+0=../Src/main.c
+1=../Src/py32f002b_it.c

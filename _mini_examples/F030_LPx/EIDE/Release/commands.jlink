@@ -1,0 +1,6 @@
+r
+halt
+loadfile "c:\MCU\PY32xx\_mini_examples\F030_LPx\EIDE\Release\LPstart.hex"
+r
+go
+exit

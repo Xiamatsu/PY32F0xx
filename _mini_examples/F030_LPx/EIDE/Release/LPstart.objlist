@@ -1,0 +1,4 @@
+./Release/.obj/__/Src/main.o
+./Release/.obj/__/Src/py32f0xx_it.o
+./Release/.obj/__/System/startup_py32f030xx.o
+./Release/.obj/__/System/system_py32f0xx.o

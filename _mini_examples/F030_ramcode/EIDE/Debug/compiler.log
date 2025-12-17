@@ -1,0 +1,15 @@
+>>> cc
+
+./../Src/main.c: In function 'app_LPTIM1_Delay':
+./../Src/main.c:98:21: warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+   98 |     uint32_t Delay, temp;
+      |                     ^~~~
+
+
+
+
+>>> ld
+
+Memory region         Used Size  Region Size  %age Used
+             RAM:        1240 B         4 KB     30.27%
+           FLASH:        1272 B        32 KB      3.88%

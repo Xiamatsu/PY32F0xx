@@ -1,0 +1,26 @@
+[2025-12-17 23:29:05]	[done]
+	build successfully !
+
+[2025-12-17 23:33:59]	[done]
+	build successfully !
+
+[2025-12-17 23:39:20]	[done]
+	build successfully !
+
+[2025-12-17 23:40:06]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_mini_examples\F030_ramcode\Src\main.c': source file has been changed.
+
+[2025-12-17 23:40:06]	[done]
+	build successfully !
+
+[2025-12-17 23:46:01]	[done]
+	build successfully !
+
+[2025-12-17 23:48:04]	[done]
+	build successfully !
+
+[2025-12-17 23:50:57]	[done]
+	build successfully !
+

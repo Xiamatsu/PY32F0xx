@@ -13,25 +13,25 @@
 
 ## Структура файлов
 ```
-├── Drivers
-│   ├── BSP                    #  шаблоны для примеров STK 
+├── Drivers                    # библиотеки 
+│   ├── BSP                      # шаблоны для примеров STK 
 │   ├── CMSIS
-│   ├── PY32F0xx_HAL_Driver     #  PY32F002A+ только LL библиотека
-│   └── PY32F002B_HAL_Driver    #  PY32F002B  только LL библиотека
-├── JLinkDevices
+│   ├── PY32F0xx_HAL_Driver      # PY32F002A+ только LL библиотека
+│   └── PY32F002B_HAL_Driver     # PY32F002B  только LL библиотека
+├── JLinkDevices               # описание для JLink программ
 ├── Packs                      # файлы описания MCU для Keil и отладки  
 ├── STK_LL_Projects            # стандартные примеры StartKit для LL библиотеки
 ├── SVD                        # файлы описания MCU для отладки  
-├── _ll_examples             # примеры и шаблоны с использованием LL библиотеки
-│   ├── F002B_vcc_temp         # измерение Vcc и температуры (UART TX - PB4)   
-│   ├── F002B_vcc_temp_so8     # измерение Vcc и температуры (UART TX - PA7)   
-│   └── F030_vcc               # (в разработке)
-├── _mini_examples           # примеры и шаблоны чисто на CMSIS
-│   ├── F002B_Blink            # (в разработке)   
-│   ├── F002B_LPx              # старт с HSI-min -> LSI и тестирование Flash Sleep     
-│   ├── F030_Blink             # (в разработке)
-│   ├── F030_LPx               # старт с HSI-min -> LSI и тестирование Flash Sleep  
-│   └── F030_ramcode           # LSI + FlashSleep + LPTIM - основная программа а RAM
+├── _ll_examples               # примеры и шаблоны с использованием LL библиотеки
+│   ├── F002B_vcc_temp           # измерение Vcc и температуры (UART TX - PB4)   
+│   ├── F002B_vcc_temp_so8       # измерение Vcc и температуры (UART TX - PA7)   
+│   └── F030_vcc                 # (в разработке)
+├── _mini_examples             # примеры и шаблоны чисто на CMSIS
+│   ├── F002B_Blink              # (в разработке)   
+│   ├── F002B_LPx                # старт с HSI-min -> LSI и тестирование Flash Sleep     
+│   ├── F030_Blink               # (в разработке)
+│   ├── F030_LPx                 # старт с HSI-min -> LSI и тестирование Flash Sleep  
+│   └── F030_ramcode             # LSI + FlashSleep + LPTIM - основная программа а RAM
 ├── openocd
 └── README.md
 ```

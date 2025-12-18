@@ -32,7 +32,7 @@
 │   ├── F030_Blink               # (в разработке)
 │   ├── F030_LPx                 # старт с HSI-min -> LSI и тестирование Flash Sleep  
 │   └── F030_ramcode             # LSI + FlashSleep + LPTIM - основная программа а RAM
-├── openocd
+├── openocd                    # версия с поддержкой PY32
 └── README.md
 ```
 

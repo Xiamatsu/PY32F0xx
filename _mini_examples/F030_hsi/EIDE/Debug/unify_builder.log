@@ -1,0 +1,68 @@
+[2025-12-17 22:52:21]	[info] incremental build: 4 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_mini_examples\F030_ramcode\Src\main.c': object (.o) file not exist
+'c:\MCU\PY32xx\_mini_examples\F030_ramcode\Src\py32f0xx_it.c': object (.o) file not exist
+'c:\MCU\PY32xx\_mini_examples\F030_ramcode\System\startup_py32f030xx.s': object (.o) file not exist
+'c:\MCU\PY32xx\_mini_examples\F030_ramcode\System\system_py32f0xx.c': object (.o) file not exist
+
+[2025-12-17 22:52:21]	[done]
+	build successfully !
+
+[2025-12-17 23:04:02]	compilation failed at : "c:\MCU\PY32xx\_mini_examples\F030_ramcode\Src\main.c", exit code: 1
+command: 
+  "c:\xpack\xpack-arm-none-eabi-gcc-14.2.1-1.1\bin\arm-none-eabi-gcc.exe" -c -xc -std=c23 -I../Inc -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -D"PY32F030x6" -mcpu=cortex-m0plus -mthumb -Os -Wall -g -ffunction-sections -fdata-sections -funsigned-char --specs=nano.specs -o ./Debug/.obj/__/Src/main.o -MMD ./../Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./../Src/main.c: In function 'main':
+./../Src/main.c:51:3: error: implicit declaration of function 'app_LPTIM1_Init'; did you mean 'app_LPTIM1_Delay'? [-Wimplicit-function-declaration]
+   51 |   app_LPTIM1_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   app_LPTIM1_Delay
+./../Src/main.c: In function 'app_LPTIM1_Delay':
+./../Src/main.c:98:21: warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+   98 |     uint32_t Delay, temp;
+      |                     ^~~~
+
+[2025-12-17 23:04:39]	[done]
+	build successfully !
+
+[2025-12-17 23:08:51]	[done]
+	build successfully !
+
+[2025-12-17 23:27:40]	[done]
+	build successfully !
+
+[2025-12-21 23:30:01]	[done]
+	build successfully !
+
+[2025-12-21 23:31:42]	[done]
+	build successfully !
+
+[2025-12-21 23:43:56]	[done]
+	build successfully !
+
+[2025-12-22 09:13:18]	[done]
+	build successfully !
+
+[2025-12-22 09:27:11]	[done]
+	build successfully !
+
+[2025-12-22 09:51:04]	[done]
+	build successfully !
+
+[2025-12-22 10:05:51]	[done]
+	build successfully !
+
+[2025-12-22 10:10:49]	[done]
+	build successfully !
+
+[2025-12-22 10:11:21]	[done]
+	build successfully !
+
+[2025-12-22 10:12:30]	[done]
+	build successfully !
+
+[2025-12-22 15:15:33]	[done]
+	build successfully !
+

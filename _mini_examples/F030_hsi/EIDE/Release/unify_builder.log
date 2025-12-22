@@ -1,0 +1,117 @@
+[2025-12-17 23:29:05]	[done]
+	build successfully !
+
+[2025-12-17 23:33:59]	[done]
+	build successfully !
+
+[2025-12-17 23:39:20]	[done]
+	build successfully !
+
+[2025-12-17 23:40:06]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'c:\MCU\PY32xx\_mini_examples\F030_ramcode\Src\main.c': source file has been changed.
+
+[2025-12-17 23:40:06]	[done]
+	build successfully !
+
+[2025-12-17 23:46:01]	[done]
+	build successfully !
+
+[2025-12-17 23:48:04]	[done]
+	build successfully !
+
+[2025-12-20 11:50:32]	[done]
+	build successfully !
+
+[2025-12-21 23:10:02]	compilation failed at : "c:\MCU\PY32xx\_mini_examples\F030_hsi\Src\main.c", exit code: 1
+command: 
+  "c:\xpack\xpack-arm-none-eabi-gcc-14.2.1-1.1\bin\arm-none-eabi-gcc.exe" -c -xc -std=c23 -I../Inc -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -D"PY32F030x6" -mcpu=cortex-m0plus -mthumb -Os -Wall -g -ffunction-sections -fdata-sections -funsigned-char --specs=nano.specs -o ./Release/.obj/__/Src/main.o -MMD ./../Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./../Src/main.c: In function 'main':
+./../Src/main.c:55:56: error: expected ';' before ')' token
+   55 |   GPIOF->AFR[1] = GPIOF->AFR[1] & ~GPIO_AFRL_AFSEL2_Msk) | (6 << GPIO_AFRL_AFSEL2_Pos);
+      |                                                        ^
+./../Src/main.c:55:56: error: expected statement before ')' token
+./../Src/main.c:55:58: error: expected expression before '|' token
+   55 |   GPIOF->AFR[1] = GPIOF->AFR[1] & ~GPIO_AFRL_AFSEL2_Msk) | (6 << GPIO_AFRL_AFSEL2_Pos);
+      |                                                          ^
+./../Src/main.c: In function 'main_ram':
+./../Src/main.c:75:31: error: 'k' undeclared (first use in this function); did you mean 'k3'?
+   75 |     k1 = (k1 == 0x1FF ) ? 0 : k + 34;
+      |                               ^
+      |                               k3
+./../Src/main.c:75:31: note: each undeclared identifier is reported only once for each function it appears in
+./../Src/main.c: In function 'app_LPTIM1_Delay':
+./../Src/main.c:102:21: warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+  102 |     uint32_t Delay, temp;
+      |                     ^~~~
+
+[2025-12-21 23:10:26]	compilation failed at : "c:\MCU\PY32xx\_mini_examples\F030_hsi\Src\main.c", exit code: 1
+command: 
+  "c:\xpack\xpack-arm-none-eabi-gcc-14.2.1-1.1\bin\arm-none-eabi-gcc.exe" -c -xc -std=c23 -I../Inc -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -D"PY32F030x6" -mcpu=cortex-m0plus -mthumb -Os -Wall -g -ffunction-sections -fdata-sections -funsigned-char --specs=nano.specs -o ./Release/.obj/__/Src/main.o -MMD ./../Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./../Src/main.c: In function 'main':
+./../Src/main.c:55:56: error: expected ';' before ')' token
+   55 |   GPIOF->AFR[1] = GPIOF->AFR[1] & ~GPIO_AFRL_AFSEL2_Msk) | (6 << GPIO_AFRL_AFSEL2_Pos);
+      |                                                        ^
+./../Src/main.c:55:56: error: expected statement before ')' token
+./../Src/main.c:55:58: error: expected expression before '|' token
+   55 |   GPIOF->AFR[1] = GPIOF->AFR[1] & ~GPIO_AFRL_AFSEL2_Msk) | (6 << GPIO_AFRL_AFSEL2_Pos);
+      |                                                          ^
+./../Src/main.c: In function 'app_LPTIM1_Delay':
+./../Src/main.c:102:21: warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+  102 |     uint32_t Delay, temp;
+      |                     ^~~~
+
+[2025-12-21 23:10:37]	compilation failed at : "c:\MCU\PY32xx\_mini_examples\F030_hsi\Src\main.c", exit code: 1
+command: 
+  "c:\xpack\xpack-arm-none-eabi-gcc-14.2.1-1.1\bin\arm-none-eabi-gcc.exe" -c -xc -std=c23 -I../Inc -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -D"PY32F030x6" -mcpu=cortex-m0plus -mthumb -Os -Wall -g -ffunction-sections -fdata-sections -funsigned-char --specs=nano.specs -o ./Release/.obj/__/Src/main.o -MMD ./../Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./../Src/main.c: In function 'main':
+./../Src/main.c:55:56: error: expected ';' before ')' token
+   55 |   GPIOF->AFR[1] = GPIOF->AFR[1] & ~GPIO_AFRL_AFSEL2_Msk) | (6 << GPIO_AFRL_AFSEL2_Pos);
+      |                                                        ^
+./../Src/main.c:55:56: error: expected statement before ')' token
+./../Src/main.c:55:58: error: expected expression before '|' token
+   55 |   GPIOF->AFR[1] = GPIOF->AFR[1] & ~GPIO_AFRL_AFSEL2_Msk) | (6 << GPIO_AFRL_AFSEL2_Pos);
+      |                                                          ^
+./../Src/main.c: In function 'app_LPTIM1_Delay':
+./../Src/main.c:102:21: warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+  102 |     uint32_t Delay, temp;
+      |                     ^~~~
+
+[2025-12-21 23:11:39]	[done]
+	build successfully !
+
+[2025-12-21 23:12:18]	[done]
+	build successfully !
+
+[2025-12-21 23:16:27]	[done]
+	build successfully !
+
+[2025-12-21 23:16:53]	[done]
+	build successfully !
+
+[2025-12-21 23:20:13]	compilation failed at : "c:\MCU\PY32xx\_mini_examples\F030_hsi\Src\main.c", exit code: 1
+command: 
+  "c:\xpack\xpack-arm-none-eabi-gcc-14.2.1-1.1\bin\arm-none-eabi-gcc.exe" -c -xc -std=c23 -I../Inc -I../../../Drivers/CMSIS/Include -I../../../Drivers/CMSIS/Device/PY32F0xx/Include -D"PY32F030x6" -mcpu=cortex-m0plus -mthumb -Os -Wall -g -ffunction-sections -fdata-sections -funsigned-char --specs=nano.specs -o ./Release/.obj/__/Src/main.o -MMD ./../Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./../Src/main.c: In function 'main_ram':
+./../Src/main.c:72:19: error: 'k' undeclared (first use in this function); did you mean 'k3'?
+   72 |     for ( k1 = 1; k < 0x200; k += 34 ) {
+      |                   ^
+      |                   k3
+./../Src/main.c:72:19: note: each undeclared identifier is reported only once for each function it appears in
+./../Src/main.c: In function 'app_LPTIM1_Delay':
+./../Src/main.c:104:21: warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+  104 |     uint32_t Delay, temp;
+      |                     ^~~~
+
+[2025-12-21 23:20:29]	[done]
+	build successfully !
+

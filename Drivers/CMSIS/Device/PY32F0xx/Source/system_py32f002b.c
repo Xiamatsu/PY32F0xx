@@ -1,8 +1,10 @@
 /**
   ******************************************************************************
-  * @file    system_py32f0xx.c
+  * @file    system_py32f002b.c
   * @author  MCU Application Team
-  * @brief   CMSIS Cortex-M0+ Device Peripheral Access Layer System Source File
+  * @Version V1.0.0
+  * @Date    2020-10-19
+  * @brief   CMSIS Cortex-M0+ Device Peripheral Access Layer System Source File.
   ******************************************************************************
   * @attention
   *
@@ -35,7 +37,7 @@
 #endif /* HSE_VALUE */
 
 #if !defined  (HSI_VALUE)
-#define HSI_VALUE  8000000U   /*!< Value of the Internal oscillator in Hz*/
+#define HSI_VALUE  24000000U   /*!< Value of the Internal oscillator in Hz*/
 #endif /* HSI_VALUE */
 
 #if !defined  (LSI_VALUE)
@@ -70,7 +72,16 @@ uint32_t SystemCoreClock = HSI_VALUE;
 
 const uint32_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
 const uint32_t APBPrescTable[8] =  {0, 0, 0, 0, 1, 2, 3, 4};
-const uint32_t HSIFreqTable[8] = {4000000U, 8000000U, 16000000U, 22120000U, 24000000U, 4000000U, 4000000U, 4000000U};
+#if defined(RCC_HSI48M_SUPPORT)
+const uint32_t HSIFreqTable[8] = {4000000U, 8000000U, 0U, 0U, 24000000U, 48000000U, 0U, 0U};
+#else
+const uint32_t HSIFreqTable[8] = {4000000U, 8000000U, 0U, 0U, 24000000U, 0U, 0U, 0U};
+#endif
+
+/* Private function prototypes -----------------------------------------------*/
+#ifndef SWD_DELAY
+static void DelayTime(uint32_t mdelay);
+#endif /* SWD_DELAY */
 
 /**
  * @brief  Clock functions.
@@ -98,19 +109,6 @@ void SystemCoreClockUpdate(void)             /* Get Core Clock Frequency      */
     SystemCoreClock = LSE_VALUE;
     break;
 #endif /* RCC_LSE_SUPPORT */
-#if defined(RCC_PLL_SUPPORT)
-  case RCC_CFGR_SWS_1:  /* PLL used as system clock */
-    if ((RCC->PLLCFGR & RCC_PLLCFGR_PLLSRC) == RCC_PLLCFGR_PLLSRC_HSI) /* HSI used as PLL clock source */
-    {
-      hsifs = ((READ_BIT(RCC->ICSCR, RCC_ICSCR_HSI_FS)) >> RCC_ICSCR_HSI_FS_Pos);
-      SystemCoreClock = 2 * (HSIFreqTable[hsifs]);
-    }
-    else   /* HSE used as PLL clock source */
-    {
-      SystemCoreClock = 2 * HSE_VALUE;
-    }
-    break;
-#endif /* RCC_PLL_SUPPORT */
   case 0x00000000U:  /* HSI used as system clock */
   default:                /* HSI used as system clock */
     hsifs = ((READ_BIT(RCC->ICSCR, RCC_ICSCR_HSI_FS)) >> RCC_ICSCR_HSI_FS_Pos);
@@ -133,8 +131,11 @@ void SystemCoreClockUpdate(void)             /* Get Core Clock Frequency      */
  */
 void SystemInit(void)
 {
-  /* Set the HSI clock to 8MHz by default */
-  RCC->ICSCR = (RCC->ICSCR & 0xFFFF0000) | (0x1 << 13) | ((*(uint32_t *)(0x1FFF0F04)) & 0x1FFF);
+  /*Set the HSI clock to 24MHz by default*/
+  RCC->ICSCR = (RCC->ICSCR & 0xFFFF0000) | ((*(uint32_t *)(0x1FFF0100)) & 0xFFFF);
+
+  /*Set the LSI clock to 32.768KHz by default*/
+  RCC->ICSCR = (RCC->ICSCR & 0xFE00FFFF) | (((*(uint32_t *)(0x1FFF0144)) & 0x1FF) << RCC_ICSCR_LSI_TRIM_Pos);
 
   /* Configure the Vector Table location add offset address ------------------*/
 #ifdef VECT_TAB_SRAM
@@ -142,75 +143,28 @@ void SystemInit(void)
 #else
   SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH */
 #endif /* VECT_TAB_SRAM */
+
+#ifndef SWD_DELAY
+  /* When the SWD pin is reused for other functions, this function is used to solve the 
+  problem of not being able to update the code. */
+  DelayTime(200);
+#endif /* SWD_DELAY */
 }
 
-#ifndef FORBID_VECT_TAB_MIGRATION
-#ifndef VECT_TAB_SRAM
-#if (defined (__CC_ARM)) || (defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050))
-extern int32_t $Super$$main(void);
-uint32_t VECT_SRAM_TAB[48]__attribute__((section(".ARM.__at_0x20000000")));
-
+#ifndef SWD_DELAY
 /**
- * @brief  re-define main function.
- * @param  none
- * @return int
- */
-int $Sub$$main(void)
+  * @brief  This function provides delay (in milliseconds) based on CPU cycles method.
+  * @param  mdelay: specifies the delay time length, in milliseconds.
+  * @retval None
+  */
+static void DelayTime(uint32_t mdelay)
 {
-  uint8_t i;
-  uint32_t *pFmcVect = (uint32_t *)(FLASH_BASE | VECT_TAB_OFFSET);
-  for (i = 0; i < 48; i++)
+  __IO uint32_t Delay = mdelay * (24000000U / 8U / 1000U);
+  do
   {
-    VECT_SRAM_TAB[i] = pFmcVect[i];
+    __NOP();
   }
-
-  SCB->VTOR = SRAM_BASE;
-
-  $Super$$main();
-  return 0;
+  while (Delay --);
 }
-#elif defined(__ICCARM__)
-extern int32_t main(void);
-/* __low_level_init will auto called by IAR cstartup */
-extern void __iar_data_init3(void);
-uint32_t VECT_SRAM_TAB[48] @SRAM_BASE;
-int __low_level_init(void)
-{
-  uint8_t i;
-  uint32_t *pFmcVect = (uint32_t *)(FLASH_BASE | VECT_TAB_OFFSET);
-  /* call IAR table copy function. */
-  __iar_data_init3();
-
-  for (i = 0; i < 48; i++)
-  {
-    VECT_SRAM_TAB[i] = pFmcVect[i];
-  }
-
-  SCB->VTOR = SRAM_BASE;
-
-  main();
-  return 0;
-}
-#elif defined(__GNUC__)
-extern int32_t main(void);
-extern int entry(void);
-uint32_t VECT_SRAM_TAB[48]__attribute__((section(".vectable_sram")));
-int entry(void)
-{
-  uint8_t i;
-  uint32_t *pFmcVect = (uint32_t *)(FLASH_BASE | VECT_TAB_OFFSET);
-  for (i = 0; i < 48; i++)
-  {
-    VECT_SRAM_TAB[i] = pFmcVect[i];
-  }
-
-  SCB->VTOR = SRAM_BASE;
-  
-  main();
-  return 0;
-}
-#endif /* __ICCARM__ */
-#endif /* VECT_TAB_SRAM */
-#endif /* FORBID_VECT_TAB_MIGRATION */
-
+#endif /* SWD_DELAY */
 /************************ (C) COPYRIGHT Puya *****END OF FILE******************/

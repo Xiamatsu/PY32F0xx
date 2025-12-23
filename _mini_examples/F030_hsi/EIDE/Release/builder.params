@@ -7,7 +7,7 @@
     "buildMode": "fast|multhread",
     "showRepathOnLog": true,
     "threadNum": 16,
-    "rootDir": "c:\\MCU\\PY32xx\\_mini_examples\\F030_hsi\\EIDE",
+    "rootDir": "c:\\ACHIP\\Xiamatsu\\PY32F_eide\\_mini_examples\\F030_hsi\\EIDE",
     "dumpPath": "Release",
     "outDir": "Release",
     "incDirs": [
@@ -69,20 +69,20 @@
             "output-format": "elf",
             "remove-unused-input-sections": true,
             "link-scatter": [
-                "c:/MCU/PY32xx/_mini_examples/F030_hsi/System/py32f030x6.ld"
+                "c:/ACHIP/Xiamatsu/PY32F_eide/_mini_examples/F030_hsi/System/py32f030x6.ld"
             ]
         }
     },
     "env": {
-        "workspaceFolder": "c:\\MCU\\PY32xx\\_mini_examples\\F030_hsi\\EIDE",
+        "workspaceFolder": "c:\\ACHIP\\Xiamatsu\\PY32F_eide\\_mini_examples\\F030_hsi\\EIDE",
         "workspaceFolderBasename": "EIDE",
-        "OutDir": "c:\\MCU\\PY32xx\\_mini_examples\\F030_hsi\\EIDE\\.\\Release",
+        "OutDir": "c:\\ACHIP\\Xiamatsu\\PY32F_eide\\_mini_examples\\F030_hsi\\EIDE\\.\\Release",
         "OutDirRoot": ".",
         "OutDirBase": ".\\Release",
         "ProjectName": "TestHSI",
         "ConfigName": "Release",
-        "ProjectRoot": "c:\\MCU\\PY32xx\\_mini_examples\\F030_hsi\\EIDE",
-        "ExecutableName": "c:\\MCU\\PY32xx\\_mini_examples\\F030_hsi\\EIDE\\.\\Release\\TestHSI",
+        "ProjectRoot": "c:\\ACHIP\\Xiamatsu\\PY32F_eide\\_mini_examples\\F030_hsi\\EIDE",
+        "ExecutableName": "c:\\ACHIP\\Xiamatsu\\PY32F_eide\\_mini_examples\\F030_hsi\\EIDE\\.\\Release\\TestHSI",
         "ChipPackDir": "",
         "ChipName": "",
         "SYS_Platform": "win32",

@@ -1,6 +1,0 @@
--L../../../Drivers/CMSIS/Device/PY32F0xx/Source -mcpu=cortex-m0plus -mthumb -T c:/MCU/PY32xx/_mini_examples/F030_ramcode/System/py32f030x6.ld -Wl,--gc-sections -Wl,--print-memory-usage --specs=nano.specs -Wl,--no-warn-rwx-segments
--Wl,-Map=./Debug/LPram.map
--o ./Debug/LPram.elf ./Debug/.obj/__/Src/main.o
-./Debug/.obj/__/Src/py32f0xx_it.o
-./Debug/.obj/__/System/startup_py32f030xx.o
-./Debug/.obj/__/System/system_py32f0xx.o -lm

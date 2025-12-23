@@ -1,6 +1,6 @@
 r
 halt
-loadfile "c:\MCU\PY32xx\_mini_examples\F030_hsi\EIDE\Release\TestHSI.hex"
+loadfile "c:\ACHIP\Xiamatsu\PY32F_eide\_mini_examples\F030_hsi\EIDE\Release\TestHSI.hex"
 r
 go
 exit

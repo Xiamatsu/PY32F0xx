@@ -76,16 +76,16 @@ Discarded input sections
  .text          0x00000000        0x0 ./Debug/.obj/__/System/system_py32f0xx.o
  .data          0x00000000        0x0 ./Debug/.obj/__/System/system_py32f0xx.o
  .bss           0x00000000        0x0 ./Debug/.obj/__/System/system_py32f0xx.o
- .text.SystemCoreClockUpdate
-                0x00000000       0xa4 ./Debug/.obj/__/System/system_py32f0xx.o
- .rodata.HSIFreqTable
-                0x00000000       0x20 ./Debug/.obj/__/System/system_py32f0xx.o
- .rodata.APBPrescTable
-                0x00000000       0x20 ./Debug/.obj/__/System/system_py32f0xx.o
- .rodata.AHBPrescTable
-                0x00000000       0x40 ./Debug/.obj/__/System/system_py32f0xx.o
  .data.SystemCoreClock
                 0x00000000        0x4 ./Debug/.obj/__/System/system_py32f0xx.o
+ .rodata.AHBPrescTable
+                0x00000000       0x40 ./Debug/.obj/__/System/system_py32f0xx.o
+ .rodata.APBPrescTable
+                0x00000000       0x20 ./Debug/.obj/__/System/system_py32f0xx.o
+ .rodata.HSIFreqTable
+                0x00000000       0x20 ./Debug/.obj/__/System/system_py32f0xx.o
+ .text.SystemCoreClockUpdate
+                0x00000000       0xc8 ./Debug/.obj/__/System/system_py32f0xx.o
  .text          0x00000000        0x0 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(libc_a-atexit.o)
  .data          0x00000000        0x0 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(libc_a-atexit.o)
  .bss           0x00000000        0x0 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(libc_a-atexit.o)
@@ -386,7 +386,7 @@ LOAD C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14
                 0x08000000                g_pfnVectors
                 0x080000c0                        . = ALIGN (0x4)
 
-.text           0x080000c0      0x2b0
+.text           0x080000c0      0x348
                 0x080000c0                        . = ALIGN (0x4)
  *(.text)
  *(.text*)
@@ -394,137 +394,136 @@ LOAD C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14
                 0x080000c0       0x28 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
  .text.frame_dummy
                 0x080000e8       0x20 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
+ .text.main     0x08000108       0x88 ./Debug/.obj/__/Src/main.o
+                0x08000108                main
  .text.app_LPTIM1_Enable
-                0x08000108       0x40 ./Debug/.obj/__/Src/main.o
-                0x08000108                app_LPTIM1_Enable
- .text.main     0x08000148       0x7c ./Debug/.obj/__/Src/main.o
-                0x08000148                main
+                0x08000190       0x58 ./Debug/.obj/__/Src/main.o
+                0x08000190                app_LPTIM1_Enable
  .text.NMI_Handler
-                0x080001c4        0x2 ./Debug/.obj/__/Src/py32f0xx_it.o
-                0x080001c4                NMI_Handler
+                0x080001e8        0xa ./Debug/.obj/__/Src/py32f0xx_it.o
+                0x080001e8                NMI_Handler
  .text.HardFault_Handler
-                0x080001c6        0x2 ./Debug/.obj/__/Src/py32f0xx_it.o
-                0x080001c6                HardFault_Handler
+                0x080001f2        0x8 ./Debug/.obj/__/Src/py32f0xx_it.o
+                0x080001f2                HardFault_Handler
  .text.SVC_Handler
-                0x080001c8        0x2 ./Debug/.obj/__/Src/py32f0xx_it.o
-                0x080001c8                SVC_Handler
+                0x080001fa        0xa ./Debug/.obj/__/Src/py32f0xx_it.o
+                0x080001fa                SVC_Handler
  .text.PendSV_Handler
-                0x080001ca        0x2 ./Debug/.obj/__/Src/py32f0xx_it.o
-                0x080001ca                PendSV_Handler
+                0x08000204        0xa ./Debug/.obj/__/Src/py32f0xx_it.o
+                0x08000204                PendSV_Handler
  .text.SysTick_Handler
-                0x080001cc        0x2 ./Debug/.obj/__/Src/py32f0xx_it.o
-                0x080001cc                SysTick_Handler
- *fill*         0x080001ce        0x2 
+                0x0800020e        0xa ./Debug/.obj/__/Src/py32f0xx_it.o
+                0x0800020e                SysTick_Handler
  .text.Reset_Handler
-                0x080001d0       0x7c ./Debug/.obj/__/System/startup_py32f030xx.o
-                0x080001d0                Reset_Handler
+                0x08000218       0x7c ./Debug/.obj/__/System/startup_py32f030xx.o
+                0x08000218                Reset_Handler
  .text.Default_Handler
-                0x0800024c        0x2 ./Debug/.obj/__/System/startup_py32f030xx.o
-                0x0800024c                TIM1_CC_IRQHandler
-                0x0800024c                PVD_IRQHandler
-                0x0800024c                I2C1_IRQHandler
-                0x0800024c                SPI1_IRQHandler
-                0x0800024c                EXTI2_3_IRQHandler
-                0x0800024c                TIM17_IRQHandler
-                0x0800024c                RTC_IRQHandler
-                0x0800024c                LED_IRQHandler
-                0x0800024c                TIM16_IRQHandler
-                0x0800024c                TIM3_IRQHandler
-                0x0800024c                EXTI4_15_IRQHandler
-                0x0800024c                RCC_IRQHandler
-                0x0800024c                DMA1_Channel1_IRQHandler
-                0x0800024c                Default_Handler
-                0x0800024c                TIM14_IRQHandler
-                0x0800024c                EXTI0_1_IRQHandler
-                0x0800024c                SPI2_IRQHandler
-                0x0800024c                WWDG_IRQHandler
-                0x0800024c                DMA1_Channel2_3_IRQHandler
-                0x0800024c                ADC_COMP_IRQHandler
-                0x0800024c                USART2_IRQHandler
-                0x0800024c                FLASH_IRQHandler
-                0x0800024c                USART1_IRQHandler
-                0x0800024c                TIM1_BRK_UP_TRG_COM_IRQHandler
-                0x0800024c                LPTIM1_IRQHandler
- .text.DelayTime
-                0x0800024e       0x1c ./Debug/.obj/__/System/system_py32f0xx.o
- *fill*         0x0800026a        0x2 
+                0x08000294        0x2 ./Debug/.obj/__/System/startup_py32f030xx.o
+                0x08000294                TIM1_CC_IRQHandler
+                0x08000294                PVD_IRQHandler
+                0x08000294                I2C1_IRQHandler
+                0x08000294                SPI1_IRQHandler
+                0x08000294                EXTI2_3_IRQHandler
+                0x08000294                TIM17_IRQHandler
+                0x08000294                RTC_IRQHandler
+                0x08000294                LED_IRQHandler
+                0x08000294                TIM16_IRQHandler
+                0x08000294                TIM3_IRQHandler
+                0x08000294                EXTI4_15_IRQHandler
+                0x08000294                RCC_IRQHandler
+                0x08000294                DMA1_Channel1_IRQHandler
+                0x08000294                Default_Handler
+                0x08000294                TIM14_IRQHandler
+                0x08000294                EXTI0_1_IRQHandler
+                0x08000294                SPI2_IRQHandler
+                0x08000294                WWDG_IRQHandler
+                0x08000294                DMA1_Channel2_3_IRQHandler
+                0x08000294                ADC_COMP_IRQHandler
+                0x08000294                USART2_IRQHandler
+                0x08000294                FLASH_IRQHandler
+                0x08000294                USART1_IRQHandler
+                0x08000294                TIM1_BRK_UP_TRG_COM_IRQHandler
+                0x08000294                LPTIM1_IRQHandler
+ *fill*         0x08000296        0x2 
  .text.SystemInit
-                0x0800026c       0x60 ./Debug/.obj/__/System/system_py32f0xx.o
-                0x0800026c                SystemInit
- .text.entry    0x080002cc       0x34 ./Debug/.obj/__/System/system_py32f0xx.o
-                0x080002cc                entry
+                0x08000298       0x78 ./Debug/.obj/__/System/system_py32f0xx.o
+                0x08000298                SystemInit
+ .text.entry    0x08000310       0x5c ./Debug/.obj/__/System/system_py32f0xx.o
+                0x08000310                entry
+ .text.DelayTime
+                0x0800036c       0x2c ./Debug/.obj/__/System/system_py32f0xx.o
  .text.__libc_init_array
-                0x08000300       0x48 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(libc_a-init.o)
-                0x08000300                __libc_init_array
+                0x08000398       0x48 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(libc_a-init.o)
+                0x08000398                __libc_init_array
  *(.glue_7)
- .glue_7        0x08000348        0x0 linker stubs
+ .glue_7        0x080003e0        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08000348        0x0 linker stubs
+ .glue_7t       0x080003e0        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08000348        0x0 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
+ .eh_frame      0x080003e0        0x0 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
  *(.init)
- .init          0x08000348        0x4 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crti.o
-                0x08000348                _init
- .init          0x0800034c        0x8 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtn.o
+ .init          0x080003e0        0x4 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crti.o
+                0x080003e0                _init
+ .init          0x080003e4        0x8 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x08000354        0x4 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crti.o
-                0x08000354                _fini
- .fini          0x08000358        0x8 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtn.o
- .fini.__stub   0x08000360       0x10 linker stubs
-                0x08000370                        . = ALIGN (0x4)
-                0x08000370                        _etext = .
+ .fini          0x080003ec        0x4 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crti.o
+                0x080003ec                _fini
+ .fini          0x080003f0        0x8 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtn.o
+ .fini.__stub   0x080003f8       0x10 linker stubs
+                0x08000408                        . = ALIGN (0x4)
+                0x08000408                        _etext = .
 
-.vfp11_veneer   0x08000370        0x0
- .vfp11_veneer  0x08000370        0x0 linker stubs
+.vfp11_veneer   0x08000408        0x0
+ .vfp11_veneer  0x08000408        0x0 linker stubs
 
-.v4_bx          0x08000370        0x0
- .v4_bx         0x08000370        0x0 linker stubs
+.v4_bx          0x08000408        0x0
+ .v4_bx         0x08000408        0x0 linker stubs
 
-.iplt           0x08000370        0x0
- .iplt          0x08000370        0x0 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x08000408        0x0
+ .iplt          0x08000408        0x0 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x08000370        0x0
-                0x08000370                        . = ALIGN (0x4)
+.rodata         0x08000408        0x0
+                0x08000408                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
-                0x08000370                        . = ALIGN (0x4)
+                0x08000408                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x08000370        0x0
-                0x08000370                        __exidx_start = .
+.ARM            0x08000408        0x0
+                0x08000408                        __exidx_start = .
  *(.ARM.exidx*)
-                0x08000370                        __exidx_end = .
+                0x08000408                        __exidx_end = .
 
-.preinit_array  0x08000370        0x0
-                0x08000370                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08000408        0x0
+                0x08000408                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08000370                        PROVIDE (__preinit_array_end = .)
+                0x08000408                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x08000370        0x4
-                0x08000370                        PROVIDE (__init_array_start = .)
+.init_array     0x08000408        0x4
+                0x08000408                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08000370        0x4 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x08000374                        PROVIDE (__init_array_end = .)
+ .init_array    0x08000408        0x4 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0800040c                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x08000374        0x4
-                0x08000374                        PROVIDE (__fini_array_start = .)
+.fini_array     0x0800040c        0x4
+                0x0800040c                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08000374        0x4 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x08000378                        PROVIDE (__fini_array_end = .)
-                0x08000438                        _sidata = LOADADDR (.data)
+ .fini_array    0x0800040c        0x4 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x08000410                        PROVIDE (__fini_array_end = .)
+                0x080004d0                        _sidata = LOADADDR (.data)
 
-.vect_data      0x20000000       0xc0 load address 0x08000378
+.vect_data      0x20000000       0xc0 load address 0x08000410
                 0x20000000                        . = ALIGN (0x4)
  *(.vectable_sram)
  .vectable_sram
                 0x20000000       0xc0 ./Debug/.obj/__/System/system_py32f0xx.o
                 0x20000000                VECT_SRAM_TAB
 
-.data           0x200000c0        0x0 load address 0x08000438
+.data           0x200000c0        0x0 load address 0x080004d0
                 0x200000c0                        . = ALIGN (0x4)
                 0x200000c0                        _sdata = .
  *(.data)
@@ -532,11 +531,11 @@ LOAD C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14
                 0x200000c0                        . = ALIGN (0x4)
                 0x200000c0                        _edata = .
 
-.igot.plt       0x200000c0        0x0 load address 0x08000438
+.igot.plt       0x200000c0        0x0 load address 0x080004d0
  .igot.plt      0x200000c0        0x0 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
                 0x200000c0                        . = ALIGN (0x4)
 
-.bss            0x200000c0       0x1c load address 0x08000438
+.bss            0x200000c0       0x1c load address 0x080004d0
                 0x200000c0                        _sbss = .
                 0x200000c0                        __bss_start__ = _sbss
  *(.bss)
@@ -551,7 +550,7 @@ LOAD C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14
                 0x200000dc                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200000dc      0x304 load address 0x08000438
+                0x200000dc      0x304 load address 0x080004d0
                 0x200000e0                        . = ALIGN (0x8)
  *fill*         0x200000dc        0x4 
                 [!provide]                        PROVIDE (end = .)
@@ -562,26 +561,26 @@ LOAD C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14
  *fill*         0x200001e0      0x200 
                 0x200003e0                        . = ALIGN (0x8)
 
-.ramcodelalign  0x08000438        0x0
-                0x08000438                        . = ALIGN (0x4)
-                0x08000438                        PROVIDE (_ramcode_lma = .)
+.ramcodelalign  0x080004d0        0x0
+                0x080004d0                        . = ALIGN (0x4)
+                0x080004d0                        PROVIDE (_ramcode_lma = .)
 
-.ramcode        0x200003e0      0x128 load address 0x08000438
+.ramcode        0x200003e0      0x158 load address 0x080004d0
                 0x200003e0                        . = ALIGN (0x4)
                 0x200003e0                        PROVIDE (_ramcode_vma_start = .)
  *(.ramcode)
- .ramcode       0x200003e0      0x110 ./Debug/.obj/__/Src/main.o
-                0x200003e0                app_LPTIM1_Delay
-                0x20000448                main_ram
-                0x200004d0                app_LPTIM1_Disable
- .ramcode       0x200004f0       0x18 ./Debug/.obj/__/System/startup_py32f030xx.o
-                0x200004f0                Flash_Exit_From_Sleep
+ .ramcode       0x200003e0      0x140 ./Debug/.obj/__/Src/main.o
+                0x200003e0                main_ram
+                0x20000454                app_LPTIM1_Delay
+                0x200004f4                app_LPTIM1_Disable
+ .ramcode       0x20000520       0x18 ./Debug/.obj/__/System/startup_py32f030xx.o
+                0x20000520                Flash_Exit_From_Sleep
  *(.ramcode*)
-                0x20000508                        . = ALIGN (0x4)
-                0x20000508                        PROVIDE (_ramcode_vma_end = .)
+                0x20000538                        . = ALIGN (0x4)
+                0x20000538                        PROVIDE (_ramcode_vma_end = .)
 
-.rel.dyn        0x20000508        0x0 load address 0x08000560
- .rel.iplt      0x20000508        0x0 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x20000538        0x0 load address 0x08000628
+ .rel.iplt      0x20000538        0x0 C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
 
 /DISCARD/
  libc.a(*)
@@ -621,24 +620,17 @@ LOAD C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14
  .comment       0x00000039       0x3a ./Debug/.obj/__/System/system_py32f0xx.o
  .comment       0x00000039       0x3a C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(libc_a-init.o)
 
-.debug_info     0x00000000      0x92c
- .debug_info    0x00000000      0x3de ./Debug/.obj/__/Src/main.o
- .debug_info    0x000003de       0xbd ./Debug/.obj/__/Src/py32f0xx_it.o
- .debug_info    0x0000049b       0x30 ./Debug/.obj/__/System/startup_py32f030xx.o
- .debug_info    0x000004cb      0x461 ./Debug/.obj/__/System/system_py32f0xx.o
+.debug_info     0x00000000      0x8b2
+ .debug_info    0x00000000      0x393 ./Debug/.obj/__/Src/main.o
+ .debug_info    0x00000393       0xbd ./Debug/.obj/__/Src/py32f0xx_it.o
+ .debug_info    0x00000450       0x30 ./Debug/.obj/__/System/startup_py32f030xx.o
+ .debug_info    0x00000480      0x432 ./Debug/.obj/__/System/system_py32f0xx.o
 
-.debug_abbrev   0x00000000      0x3c2
- .debug_abbrev  0x00000000      0x188 ./Debug/.obj/__/Src/main.o
- .debug_abbrev  0x00000188       0x45 ./Debug/.obj/__/Src/py32f0xx_it.o
- .debug_abbrev  0x000001cd       0x24 ./Debug/.obj/__/System/startup_py32f030xx.o
- .debug_abbrev  0x000001f1      0x1d1 ./Debug/.obj/__/System/system_py32f0xx.o
-
-.debug_loclists
-                0x00000000       0xa3
- .debug_loclists
-                0x00000000       0x5c ./Debug/.obj/__/Src/main.o
- .debug_loclists
-                0x0000005c       0x47 ./Debug/.obj/__/System/system_py32f0xx.o
+.debug_abbrev   0x00000000      0x340
+ .debug_abbrev  0x00000000      0x139 ./Debug/.obj/__/Src/main.o
+ .debug_abbrev  0x00000139       0x45 ./Debug/.obj/__/Src/py32f0xx_it.o
+ .debug_abbrev  0x0000017e       0x24 ./Debug/.obj/__/System/startup_py32f030xx.o
+ .debug_abbrev  0x000001a2      0x19e ./Debug/.obj/__/System/system_py32f0xx.o
 
 .debug_aranges  0x00000000       0xe0
  .debug_aranges
@@ -651,35 +643,35 @@ LOAD C:/xpack/xpack-arm-none-eabi-gcc-14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14
                 0x000000a8       0x38 ./Debug/.obj/__/System/system_py32f0xx.o
 
 .debug_rnglists
-                0x00000000       0x96
+                0x00000000       0x97
  .debug_rnglists
-                0x00000000       0x2c ./Debug/.obj/__/Src/main.o
+                0x00000000       0x2d ./Debug/.obj/__/Src/main.o
  .debug_rnglists
-                0x0000002c       0x2b ./Debug/.obj/__/Src/py32f0xx_it.o
+                0x0000002d       0x2b ./Debug/.obj/__/Src/py32f0xx_it.o
  .debug_rnglists
-                0x00000057       0x19 ./Debug/.obj/__/System/startup_py32f030xx.o
+                0x00000058       0x19 ./Debug/.obj/__/System/startup_py32f030xx.o
  .debug_rnglists
-                0x00000070       0x26 ./Debug/.obj/__/System/system_py32f0xx.o
+                0x00000071       0x26 ./Debug/.obj/__/System/system_py32f0xx.o
 
-.debug_line     0x00000000      0x865
- .debug_line    0x00000000      0x3e8 ./Debug/.obj/__/Src/main.o
- .debug_line    0x000003e8       0x9a ./Debug/.obj/__/Src/py32f0xx_it.o
- .debug_line    0x00000482       0x90 ./Debug/.obj/__/System/startup_py32f030xx.o
- .debug_line    0x00000512      0x353 ./Debug/.obj/__/System/system_py32f0xx.o
+.debug_line     0x00000000      0x6ac
+ .debug_line    0x00000000      0x2ba ./Debug/.obj/__/Src/main.o
+ .debug_line    0x000002ba       0x96 ./Debug/.obj/__/Src/py32f0xx_it.o
+ .debug_line    0x00000350       0x90 ./Debug/.obj/__/System/startup_py32f030xx.o
+ .debug_line    0x000003e0      0x2cc ./Debug/.obj/__/System/system_py32f0xx.o
 
-.debug_str      0x00000000      0x3d2
- .debug_str     0x00000000      0x3d2 ./Debug/.obj/__/Src/main.o
-                                0x298 (size before relaxing)
- .debug_str     0x000003d2      0x1a8 ./Debug/.obj/__/Src/py32f0xx_it.o
- .debug_str     0x000003d2       0x68 ./Debug/.obj/__/System/startup_py32f030xx.o
- .debug_str     0x000003d2      0x2f9 ./Debug/.obj/__/System/system_py32f0xx.o
+.debug_str      0x00000000      0x3e1
+ .debug_str     0x00000000      0x3e1 ./Debug/.obj/__/Src/main.o
+                                0x2a7 (size before relaxing)
+ .debug_str     0x000003e1      0x1b7 ./Debug/.obj/__/Src/py32f0xx_it.o
+ .debug_str     0x000003e1       0x77 ./Debug/.obj/__/System/startup_py32f030xx.o
+ .debug_str     0x000003e1      0x308 ./Debug/.obj/__/System/system_py32f0xx.o
 
-.debug_frame    0x00000000      0x138
- .debug_frame   0x00000000       0x74 ./Debug/.obj/__/Src/main.o
- .debug_frame   0x00000074       0x60 ./Debug/.obj/__/Src/py32f0xx_it.o
- .debug_frame   0x000000d4       0x64 ./Debug/.obj/__/System/system_py32f0xx.o
+.debug_frame    0x00000000      0x1cc
+ .debug_frame   0x00000000       0xa4 ./Debug/.obj/__/Src/main.o
+ .debug_frame   0x000000a4       0x9c ./Debug/.obj/__/Src/py32f0xx_it.o
+ .debug_frame   0x00000140       0x8c ./Debug/.obj/__/System/system_py32f0xx.o
 
 .debug_line_str
-                0x00000000       0x4c
+                0x00000000       0x5b
  .debug_line_str
-                0x00000000       0x4c ./Debug/.obj/__/System/startup_py32f030xx.o
+                0x00000000       0x5b ./Debug/.obj/__/System/startup_py32f030xx.o

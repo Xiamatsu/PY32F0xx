@@ -1,6 +1,0 @@
-tool: GCC
-fileName: 'LPram.map'
-elfName: 'LPram.elf'
-compilerName: 'xPack GNU Arm Embedded GCC x86_64'
-compilerFullName: 'arm-none-eabi-gcc.exe (xPack GNU Arm Embedded GCC x86_64) 14.2.1 20241119'
-compilerPath: 'c:\xpack\xpack-arm-none-eabi-gcc-14.2.1-1.1\bin\arm-none-eabi-gcc.exe'

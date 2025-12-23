@@ -1,0 +1,6 @@
+r
+halt
+loadfile "c:\ACHIP\Xiamatsu\PY32F_eide\_mini_examples\F030_Fmax\EIDE\Release\TestFmax.hex"
+r
+go
+exit

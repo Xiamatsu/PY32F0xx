@@ -1,4 +1,4 @@
--L../../../Drivers/CMSIS/Device/PY32F0xx/Source -mcpu=cortex-m0plus -mthumb -T c:/MCU/PY32xx/_mini_examples/F030_hsi/System/py32f030x6.ld -Wl,--gc-sections -Wl,--print-memory-usage --specs=nano.specs -Wl,--no-warn-rwx-segments
+-L../../../Drivers/CMSIS/Device/PY32F0xx/Source -mcpu=cortex-m0plus -mthumb -T c:/ACHIP/Xiamatsu/PY32F_eide/_mini_examples/F030_hsi/System/py32f030x6.ld -Wl,--gc-sections -Wl,--print-memory-usage --specs=nano.specs -Wl,--no-warn-rwx-segments
 -Wl,-Map=./Debug/TestHSI.map
 -o ./Debug/TestHSI.elf ./Debug/.obj/__/Src/main.o
 ./Debug/.obj/__/Src/py32f0xx_it.o

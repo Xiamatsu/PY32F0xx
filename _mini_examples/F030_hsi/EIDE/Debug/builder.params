@@ -7,7 +7,7 @@
     "buildMode": "fast|multhread",
     "showRepathOnLog": true,
     "threadNum": 16,
-    "rootDir": "c:\\MCU\\PY32xx\\_mini_examples\\F030_hsi\\EIDE",
+    "rootDir": "c:\\ACHIP\\Xiamatsu\\PY32F_eide\\_mini_examples\\F030_hsi\\EIDE",
     "dumpPath": "Debug",
     "outDir": "Debug",
     "incDirs": [
@@ -46,7 +46,7 @@
             "language-cpp": "c++23",
             "one-elf-section-per-data": true,
             "one-elf-section-per-function": true,
-            "optimization": "level-debug",
+            "optimization": "level-0",
             "warnings": "all-warnings"
         },
         "global": {
@@ -69,20 +69,20 @@
             "output-format": "elf",
             "remove-unused-input-sections": true,
             "link-scatter": [
-                "c:/MCU/PY32xx/_mini_examples/F030_hsi/System/py32f030x6.ld"
+                "c:/ACHIP/Xiamatsu/PY32F_eide/_mini_examples/F030_hsi/System/py32f030x6.ld"
             ]
         }
     },
     "env": {
-        "workspaceFolder": "c:\\MCU\\PY32xx\\_mini_examples\\F030_hsi\\EIDE",
+        "workspaceFolder": "c:\\ACHIP\\Xiamatsu\\PY32F_eide\\_mini_examples\\F030_hsi\\EIDE",
         "workspaceFolderBasename": "EIDE",
-        "OutDir": "c:\\MCU\\PY32xx\\_mini_examples\\F030_hsi\\EIDE\\.\\Debug",
+        "OutDir": "c:\\ACHIP\\Xiamatsu\\PY32F_eide\\_mini_examples\\F030_hsi\\EIDE\\.\\Debug",
         "OutDirRoot": ".",
         "OutDirBase": ".\\Debug",
         "ProjectName": "TestHSI",
         "ConfigName": "Debug",
-        "ProjectRoot": "c:\\MCU\\PY32xx\\_mini_examples\\F030_hsi\\EIDE",
-        "ExecutableName": "c:\\MCU\\PY32xx\\_mini_examples\\F030_hsi\\EIDE\\.\\Debug\\TestHSI",
+        "ProjectRoot": "c:\\ACHIP\\Xiamatsu\\PY32F_eide\\_mini_examples\\F030_hsi\\EIDE",
+        "ExecutableName": "c:\\ACHIP\\Xiamatsu\\PY32F_eide\\_mini_examples\\F030_hsi\\EIDE\\.\\Debug\\TestHSI",
         "ChipPackDir": "",
         "ChipName": "",
         "SYS_Platform": "win32",
